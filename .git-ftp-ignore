@@ -2,9 +2,9 @@ wp-config.php
 wp-admin/*
 wp-includes/*
 
-wp-content/*
-!wp-content/plugins/
-!wp-content/themes/
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/index.php
 
 wp-content/themes/*
 !wp-content/themes/palmonade/
