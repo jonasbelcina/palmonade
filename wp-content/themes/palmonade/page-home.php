@@ -1,0 +1,175 @@
+<?php
+/**
+ * The template for displaying home page
+ *
+ *
+ * @package WordPress
+ * @subpackage Twenty_Sixteen
+ * @since Twenty Sixteen 1.0
+ */
+
+get_header(); ?>
+
+<section class="banner">
+	<div class="home-banner">
+		<?php if( have_rows('slides') ):
+			while( have_rows('slides') ): the_row(); 
+				$image = get_sub_field('image'); ?>
+
+				<div class="banner-item">
+					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+					<div class="banner-caption">
+						<div class="container">
+							<div class="row">
+								<h2><?php echo the_sub_field('text_line_1'); ?></h2>
+								<h3><?php echo the_sub_field('text_line_1'); ?></h3>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<?php endwhile;
+		endif; ?>
+	</div>
+</section>
+
+<section class="home-about">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="row">
+					<?php if (have_posts()) :
+						while ( have_posts() ) : the_post();
+							the_content();
+						endwhile;
+					endif; ?>
+				</div>
+			</div>
+
+			<div class="col-lg-6">
+				<div class="home-contact">
+					<?php $contact_box_image = get_field('contact_box_background_image'); ?>
+					<img class="img-responsive" src="<?php echo $contact_box_image['url']; ?>" alt="<?php echo $contact_box_image['alt']; ?>" />
+					<div class="home-contact-content">
+						<div>
+							<h3><?php the_field('contact_box_title'); ?></h3>
+							<h4><?php the_field('contact_box_subtitle'); ?></h4>
+						</div>
+						<p><?php the_field('contact_box_content'); ?></p>
+						<a href="<?php the_field('contact_box_button_link'); ?>"><?php the_field('contact_box_button_text'); ?></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="home-news">
+	<div class="container">
+		<div class="row">
+			<div class="home-news-content">
+				<div class="news-articles col-lg-8 col-md-12">
+					<?php
+						$args = array(
+							'posts_per_page'      => 2,
+							'post__in'            => get_option( 'sticky_posts' ),
+							'ignore_sticky_posts' => 1,
+						);
+						$query = new WP_Query($args);
+
+						if( $query->have_posts() ): 
+							while( $query->have_posts() ) : $query->the_post(); ?>
+								<div class="col-lg-6 col-md-6 col-sm-6 home-news-article">
+									<h2><?php the_title(); ?></h2>
+									<span class="news-date"><?php the_time('d.m.Y'); ?></span>
+									<?php the_post_thumbnail('full');?>
+									<p><?php echo shortenText(get_the_excerpt(), 128); ?></p>
+									<a href="<?php the_permalink(); ?>">Read more</a>
+								</div>
+							<?php 
+							endwhile;
+						endif;
+
+						wp_reset_query();
+					?>
+				</div>
+
+				<div class="mobile-articles col-lg-8 col-md-12">
+					<?php
+						$args = array(
+							'posts_per_page'      => 2,
+							'post__in'            => get_option( 'sticky_posts' ),
+							'ignore_sticky_posts' => 1,
+						);
+						$mobile_query = new WP_Query($args);
+
+						if( $mobile_query->have_posts() ): 
+							while( $mobile_query->have_posts() ) : $mobile_query->the_post(); ?>
+								<div class="col-lg-6 col-md-6 col-sm-6 home-news-article">
+									<h2><?php the_title(); ?></h2>
+									<span class="news-date"><?php the_time('d.m.Y'); ?></span>
+									<?php the_post_thumbnail('full');?>
+									<p><?php echo shortenText(get_the_excerpt(), 128); ?></p>
+									<a href="<?php the_permalink(); ?>">Read more</a>
+								</div>
+							<?php 
+							endwhile;
+						endif;
+
+						wp_reset_query();
+					?>
+				</div>
+
+				<div class="col-lg-4 col-md-12 home-testimonial">
+					<h2><?php the_field('testimonial_title'); ?></h2>
+					<div class="testimonial-items">
+						<?php if( have_rows('testimonial') ):
+							while( have_rows('testimonial') ): the_row(); ?>
+								<div class="testimonial-item">
+									<div class="testimonial-content">
+										<p><?php the_sub_field('testimonial_content'); ?></p>
+									</div>
+									<div class="testimonial-by">
+										<?php the_sub_field('testimonial_author'); ?>
+									</div>
+								</div>
+
+							<?php endwhile;
+						endif; ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="home-brands">
+	<div class="container">
+		<div class="row">
+			<h2>Our Brands</h2>
+			<div class="brand-items">
+				<div class="brand-item">
+					Secure Plus FM
+				</div>
+
+				<div class="brand-item">
+					Meher &amp; Riddhima
+				</div>
+
+				<div class="brand-item">
+					Interstuhl
+				</div>
+
+				<div class="brand-item">
+					Bristol
+				</div>
+
+				<div class="brand-item">
+					Meher &amp; Riddhima
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<?php get_footer(); ?>
