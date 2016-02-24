@@ -174,7 +174,7 @@ header {
 	.home-banner .owl-stage,
 	.home-banner .owl-item,
 	.banner-item {
-		height: auto !important;
+		height: 100% !important;
 	}
 
 	.banner-item {
