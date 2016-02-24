@@ -37,9 +37,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="kitchen-details-banner">
-		<div class="videoWrapper">
-			<iframe width="1280" height="720" src="https://www.youtube.com/embed/OPf0YbXqDm0?rel=0&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
-		</div>
+		<?php if(get_field('video')) : ?>
+			<div class="videoWrapper">
+				<iframe width="1280" height="720" src="https://www.youtube.com/embed/<?php the_field('video'); ?>?rel=0&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
+			</div>
+		<?php else :
+			$thumb_id = get_post_thumbnail_id();
+			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'full', true);
+			$thumb_url = $thumb_url_array[0]; ?>
+			<img src="<?php echo $thumb_url; ?>" alt="<?php the_title(); ?> banner image" />
+		<?php endif; ?>
 
 		<div class="banner-caption">
 			<div class="container">

@@ -123,4 +123,6 @@
 		});
 	}
 
+	$('.blog-posts .news-item:nth-child(3n)').addClass('news-item2');
+
 })(jQuery);
