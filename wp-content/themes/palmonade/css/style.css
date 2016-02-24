@@ -758,6 +758,40 @@ footer {
 			color: #d8d8d8;
 		}
 
+/* 
+*  News page
+*/
+.blog-banner {
+	height: 310px;
+}
+
+	.blog-banner .container {
+		height: 100%;
+		padding-top: 75px;
+	}
+
+	.blog-banner .banner-text {
+		margin: 0;
+		position: relative;
+		top:50%;
+		-webkit-transform:translateY(-60%);
+		-moz-transform:translateY(-60%);
+		-ms-transform:translateY(-60%);
+		-o-transform:translateY(-60%);
+		transform:translateY(-60%);
+		text-align: center;
+		margin-top: -35px;
+	}
+		
+	.blog-banner .banner-text h2 {
+		color: #fff;
+		font-size: 58px;
+		font-family: 'GraphieLight';
+		text-align: center;
+		margin: 0;
+	}
+	
+
 /*
 *  Woocommerce styles
 */
