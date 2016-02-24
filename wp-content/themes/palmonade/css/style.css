@@ -1266,18 +1266,15 @@ footer {
 		}
 
 		.blog-share-icons a:first-child {
-		    background: url("../images/fb3.png") left top no-repeat;
+		    background: url("../assets/images/fb3.png") left top no-repeat;
 		}
 
-
-		/*.blog-share-icons a:nth-child(2) {background: url("../images/tumblr3.png") left top no-repeat; cursor: pointer;}*/
-
 		.blog-share-icons a:nth-child(2) {
-		    background: url("../images/twitter3.png") left top no-repeat;
+		    background: url("../assets/images/twitter3.png") left top no-repeat;
 		}
 
 		.blog-share-icons a:last-child {
-		    background: url("../images/gplus3.png") left top no-repeat;
+		    background: url("../assets/images/gplus3.png") left top no-repeat;
 		}
 
 		.blog-comments {

@@ -5,7 +5,7 @@
 			<?php if (!is_single()) : ?>
 				<button data-filter="*" class="post-filter-active">All</button>
 			<?php else: ?>
-				<a href="<?=home_url()?>/blog">All</a>
+				<a href="<?=home_url()?>/news">All</a>
 			<?php endif; ?>
 			<?php
 				$args = array(
