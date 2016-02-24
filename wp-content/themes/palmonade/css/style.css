@@ -1656,7 +1656,7 @@ button.alm-load-more-btn:focus {
 			color: #bd9c68;
 			position: absolute;
 			top: 0;
-			left: 0;
+			left: 15px;
 		}
 
 		.kitchen-details-gallery .owl-next {
@@ -1670,7 +1670,7 @@ button.alm-load-more-btn:focus {
 			color: #bd9c68;
 			position: absolute;
 			top: 0;
-			right: 0;
+			right: 15px;
 		}
 
 .kitchen-about {

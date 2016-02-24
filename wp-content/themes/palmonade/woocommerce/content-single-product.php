@@ -57,11 +57,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 			
 		<?php endif; ?>
 
-		<div class="banner-caption">
-			<div class="container">
-				<?php the_field('banner_text'); ?>
+		<?php if(get_field('banner_text')) : ?>
+			<div class="banner-caption">
+				<div class="container">
+					<?php the_field('banner_text'); ?>
+				</div>
 			</div>
-		</div>
+		<?php endif; ?>
 	</div>
 
 	<section class="kitchen-about">
