@@ -43,12 +43,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 		<?php else : ?>
 			<?php
-				// $thumb_id = get_post_thumbnail_id();
-				// $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'full', true);
-				// $thumb_url = $thumb_url_array[0]; 
-				$image = get_field('banner_image');
+				$images = get_field('gallery');
+
+				if( $images ): ?>
+				    <div class="kitchen-details-gallery">
+				        <?php foreach( $images as $image ): ?>
+	                    	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+				        <?php endforeach; ?>
+				    </div>
+				<?php endif;
+
 			?>
-			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+			
 		<?php endif; ?>
 
 		<div class="banner-caption">
@@ -57,34 +63,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 		</div>
 	</div>
-	<?php
-		/**
-		 * woocommerce_before_single_product_summary hook.
-		 *
-		 * @hooked woocommerce_show_product_sale_flash - 10
-		 * @hooked woocommerce_show_product_images - 20
-		 */
-		//do_action( 'woocommerce_before_single_product_summary' );
-	?>
-
-	<!-- <div class="summary entry-summary"> -->
-
-		<?php
-			/**
-			 * woocommerce_single_product_summary hook.
-			 *
-			 * @hooked woocommerce_template_single_title - 5
-			 * @hooked woocommerce_template_single_rating - 10
-			 * @hooked woocommerce_template_single_price - 10
-			 * @hooked woocommerce_template_single_excerpt - 20
-			 * @hooked woocommerce_template_single_add_to_cart - 30
-			 * @hooked woocommerce_template_single_meta - 40
-			 * @hooked woocommerce_template_single_sharing - 50
-			 */
-			// do_action( 'woocommerce_single_product_summary' );
-		?>
-
-	<!-- </div> --><!-- .summary -->
 
 	<section class="kitchen-about">
 		<div class="container">

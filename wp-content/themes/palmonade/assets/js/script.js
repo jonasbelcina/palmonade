@@ -78,6 +78,14 @@
 		}
 	});
 
+	$('.kitchen-details-gallery').owlCarousel({
+		items: 1,
+		nav: true,
+		loop: true,
+		navText: false,
+		animateOut: 'fadeOut',
+		autoplay: true
+	});
 
 	$('.footer-drop').on('click', function() {
 		$(this).closest('.footer-col').toggleClass('opened');

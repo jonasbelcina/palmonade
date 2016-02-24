@@ -197,6 +197,7 @@ header {
 		width: 100%;
 		font-family: 'GraphieRegular';
 		padding: 20px 0;
+		z-index: 9;
 	}
 
 		.banner-caption h2 {
@@ -1625,6 +1626,52 @@ button.alm-load-more-btn:focus {
 		text-align: center;
 		padding: 15px 0;
 	}
+
+	.kitchen-details-gallery,
+	.kitchen-details-gallery .owl-stage-outer,
+	.kitchen-details-gallery .owl-stage,
+	.kitchen-details-gallery .owl-item {
+		height: 100%;
+	}
+
+		.kitchen-details-gallery .owl-controls {
+			position: absolute;
+			top: 40%;
+			width: 100%;
+		}
+
+		.kitchen-details-gallery .owl-nav > div {
+			width: 12px;
+			height: 20px;
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 5px;
+			position: relative;
+		}
+
+		.kitchen-details-gallery .owl-prev:before {
+			content:"\e257";
+			font-family: 'Glyphicons Halflings';
+			font-size: 20px;
+			color: #bd9c68;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.kitchen-details-gallery .owl-next {
+			float: right;
+		}
+
+		.kitchen-details-gallery .owl-next:before {
+			content:"\e258";
+			font-family: 'Glyphicons Halflings';
+			font-size: 20px;
+			color: #bd9c68;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
 
 .kitchen-about {
 	background: #f2f2f2;
