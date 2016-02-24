@@ -72,8 +72,9 @@ $cat = $wp_query->get_queried_object();
 									echo '<li class="' . $this_class . '">' . $child_cat->name . $this_span . '</li>';
 									if($child_cat->count > 0) :
 										$products_args = array(
-															'post_type' => 'product',
-															'product_cat'		=> $child_cat->slug
+															'post_type' 	=> 'product',
+															'product_cat'	=> $child_cat->slug,
+															'posts_per_page' => -1
 														);
 
 										$products = new WP_Query($products_args);
