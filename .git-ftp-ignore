@@ -6,8 +6,9 @@ wp-content/uploads/
 wp-content/upgrade/
 wp-content/index.php
 
-wp-content/themes/*
-!wp-content/themes/palmonade/
+wp-content/themes/twentysixteen
+wp-content/themes/twentyfifteen
+wp-content/themes/twentyfourteen
 
 sitemap.xml
 sitemap.xml.gz
