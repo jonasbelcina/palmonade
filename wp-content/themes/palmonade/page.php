@@ -13,18 +13,6 @@
 
 get_header(); ?>
 
-<?php
-	$thumb = wp_get_attachment_url(get_post_thumbnail_id(get_option( 'page_for_posts' )));
-?>
-
-<section class="banner news-banner" <?php if($thumb){ ?>style="background: url('<?php echo $thumb; ?>') center bottom / cover no-repeat;"<?php } ?>>
-	<div class="container">
-		<div class="banner-text">
-			<h2><?php echo get_the_title( get_option('page_for_posts', true) ); ?></h2>
-		</div>
-	</div>
-</section>
-
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
 		<?php
