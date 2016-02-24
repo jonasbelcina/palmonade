@@ -57,6 +57,6 @@
 </div>
 
 <div class="blog-comments">
-	<?php //disqus_embed('palmongroup'); ?>
+	<?php disqus_embed('palmonade'); ?>
 </div>
 
