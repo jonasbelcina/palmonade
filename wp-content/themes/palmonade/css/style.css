@@ -145,6 +145,10 @@ header {
 				color: #c0a06e;
 			}
 
+			.navbar-default .navbar-nav > li > a:focus {
+				color: #fff;
+			}
+
 			.navbar-default .navbar-nav > li:nth-child(3) > a:before {
 				content: url("../assets/images/menu-dropdown.png");
 				position: absolute;
@@ -1076,19 +1080,15 @@ footer {
 	}
 
 	.side-social a:first-child {
-	    background: url("../images/social-facebook.jpg") left top no-repeat;
+	    background: url("../assets/images/social-facebook.jpg") left top no-repeat;
 	}
 
 	.side-social a:nth-child(2) {
-	    background: url("../images/social-twitter.jpg") left top no-repeat;
-	}
-
-	.side-social a:nth-child(3) {
-	    background: url("../images/social-youtube.jpg") left top no-repeat;
+	    background: url("../assets/images/social-twitter.jpg") left top no-repeat;
 	}
 
 	.side-social a:last-child {
-	    background: url("../images/social-youtube.jpg") left top no-repeat;
+	    background: url("../assets/images/social-youtube.jpg") left top no-repeat;
 	}
 
 	.stay-connected {
@@ -1285,6 +1285,79 @@ footer {
 		    max-width: 647px;
 		    padding: 30px 0;
 		    margin: 0 auto;
+		}
+
+	.sidebar-blog .posts-filter a {
+	    width: 100%;
+	    line-height: 54px;
+	    border: 1px solid #231f20;
+	    background: #fff;
+	    font-size: 20px;
+	    color: #b5985a;
+	    margin-bottom: 5px;
+	    text-align: left;
+	    padding: 0 25px;
+	    display: block;
+	}
+
+		.posts-filter h2 span {
+		    color: #231f20;
+		    font-size: 19px;
+		    font-family: 'GraphieLight';
+		    display: none;
+		    margin-top: 2px;
+		}
+
+		.sidebar-blog .posts-filter a:hover,
+		.sidebar-blog .posts-filter a:focus,
+		.sidebar-blog .posts-filter a.post-filter-active {
+		    background: #231f20;
+		    text-decoration: none;
+		}
+
+	.mobile-post-filter {
+	    display: none;
+	    width: 100%;
+	    margin: 0;
+	    padding: 0;
+	    box-shadow: none;
+	    -webkit-box-shadow: none;
+	    -moz-box-shadow: none;
+	}
+
+		.mobile-post-filter.posts-filter h2 {
+		    cursor: pointer;
+		    width: 100%;
+		    padding: 15px;
+		    margin: 0;
+		}
+
+		.mobile-post-filter.posts-filter h2 span {
+		    display: block;
+		}
+
+		.mobile-post-filter.posts-filter h2 span:last-child {
+		    display: none;
+		}
+
+		.mobile-post-filter.posts-filter a {
+		    width: 100%;
+		    line-height: 54px;
+		    border: 1px solid #231f20;
+		    background: #231f20;
+		    font-size: 20px;
+		    color: #fff;
+		    margin-bottom: 5px;
+		    text-align: left;
+		    padding: 0 25px;
+		    display: block;
+		}
+
+		.mobile-post-filter.posts-filter a:hover,
+		.mobile-post-filter.posts-filter a.post-filter-active {
+		    background: #231f20;
+		    color: #e55555;
+		    text-decoration: none;
 		}
 
 /*

@@ -125,4 +125,72 @@
 
 	$('.blog-posts .news-item:nth-child(3n)').addClass('news-item2');
 
+	// posts filter
+	$( function() {
+		var str = document.URL;
+		var category = str.indexOf('#');
+	  	var criteria = str.substring(str.indexOf('#'));
+	  	criteria = criteria.substr(1);
+
+  		// init Isotope
+	  	var $grid = $('.main-blog .blog-posts').isotope({
+	    	itemSelector: '.news-item',
+	    	layoutMode: 'masonry',
+	    	masonry: {
+	    	    columnWidth: '.news-item',
+	    	    gutter: 15
+    	  	},
+	  	});
+
+  		// bind filter button click
+  		$('.posts-filter button').on( 'click', function() {
+	  	  	var filterValue = $( this ).attr('data-filter');
+	  	  	// use filterFn if matches value
+	  	  	// filterValue = filterFns[ filterValue ] || filterValue;
+	  	  	$grid.isotope({ filter: filterValue });
+	  	  	$grid.isotope('shuffle');
+
+	  	  	// display message box if no filtered items
+	  	  	var noItems = $('<div class="no-results"><h1 class="page-title">No posts found.</h1></div>');
+  	  	  	var yesItems = $('.no-results');
+	  	  	if ( $grid.data('isotope').filteredItems.length < 1 ) {
+	  	  		if ($grid.find(yesItems)) {
+	  	  			yesItems.remove();
+	  	  		}
+	  	  	  	$grid.append(noItems).isotope( 'appended', noItems );
+	  	  	  	$grid.css({"height": "300px"});
+	  	  	} else {
+	  	  		// $grid.isotope( 'remove', noItems);
+	  	  		yesItems.remove();
+	  	  	}
+
+  		});
+
+	  	$('.posts-filter button').each(function() {
+	  		
+  			if ($(this).data('filter').substr(1) == criteria) {
+  				$(this).trigger('click');
+  				$('.posts-filter button').removeClass('post-filter-active');
+  				$(this).addClass('post-filter-active');
+  			}
+
+	  	});
+  		
+	  	// change is-checked class on buttons
+	  	$('.button-group').each( function( i, buttonGroup ) {
+	    	var $buttonGroup = $( buttonGroup );
+	    	$buttonGroup.on( 'click', 'button', function() {
+	      		$buttonGroup.find('.post-filter-active').removeClass('post-filter-active');
+	      		$( this ).addClass('post-filter-active');
+	    	});
+	  	});
+	  
+	});
+
+	$('.posts-filter.mobile-post-filter h2').on('click', function() {
+		$('.posts-filter.mobile-post-filter .button-group').slideToggle(function() {
+			$('.posts-filter.mobile-post-filter h2 span').toggle();
+		});
+	});
+
 })(jQuery);

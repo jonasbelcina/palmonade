@@ -18,7 +18,7 @@
 						<?php if (!is_single()) : ?>
 							<button data-filter=".<?php echo $category->slug; ?>"><?php echo $category->name; ?></button>
 						<?php else: ?>
-							<a href="<?=home_url()?>/blog#<?php echo $category->slug; ?>"><?php echo $category->name; ?></a>
+							<a href="<?=home_url()?>/news#<?php echo $category->slug; ?>"><?php echo $category->name; ?></a>
 						<?php endif; ?>
 					<?php 
 					endif;
@@ -28,7 +28,7 @@
 	</div>
 
 	<div class="side-box">
-		<h2>Get Social with us<span>@PalmonGroup</span></h2>
+		<h2>Get Social with us<span>@Palmonade</span></h2>
 		<ul class="side-social">
 			<a href="<?php the_field('facebook', 'options'); ?>" target="_blank"></a>
 			<a href="<?php the_field('twitter', 'options'); ?>" target="_blank"></a>

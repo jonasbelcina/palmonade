@@ -30,7 +30,6 @@ get_header(); ?>
 					<span>News and Events</span>
 				</nav>
 
-				<!--
 				<div class="side-box posts-filter mobile-post-filter">
 					<h2>Our Shows <span class="glyphicon glyphicon-plus"></span><span class="glyphicon glyphicon-minus"></span></h2>
 					<div class="button-group">
@@ -54,7 +53,6 @@ get_header(); ?>
 						?>
 					</div>
 				</div>
-				-->
 
 				<div class="single-blog-posts">
 					<?php

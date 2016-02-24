@@ -53,7 +53,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="banner-caption">
 			<div class="container">
-				Ernestomeda Soul – The Contemporary and Vintage kitchen
+				<?php the_field('banner_text'); ?>
 			</div>
 		</div>
 	</div>
@@ -90,7 +90,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-6">
-					<h2>About the Kitchen</h2>
+					<h2><?php the_field('content_heading'); ?></h2>
 					<?php the_content(); ?>
 					<a class="kitchen-enquiry" href="">Send Enquiry</a>
 				</div>
