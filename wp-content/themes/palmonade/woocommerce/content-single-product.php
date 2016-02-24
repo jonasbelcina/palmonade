@@ -41,11 +41,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="videoWrapper">
 				<iframe width="1280" height="720" src="https://www.youtube.com/embed/<?php the_field('video'); ?>?rel=0&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
 			</div>
-		<?php else :
-			$thumb_id = get_post_thumbnail_id();
-			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'full', true);
-			$thumb_url = $thumb_url_array[0]; ?>
-			<img src="<?php echo $thumb_url; ?>" alt="<?php the_title(); ?> banner image" />
+		<?php else : ?>
+			<?php
+				// $thumb_id = get_post_thumbnail_id();
+				// $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'full', true);
+				// $thumb_url = $thumb_url_array[0]; 
+				$image = get_field('banner_image');
+			?>
+			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 		<?php endif; ?>
 
 		<div class="banner-caption">

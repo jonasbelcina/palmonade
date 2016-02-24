@@ -1543,6 +1543,12 @@ button.alm-load-more-btn:focus {
 		height: 100%;
 	}
 
+	.kitchen-details-banner img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+
 	.kitchen-details-banner .banner-caption {
 		color: #fff;
 		font-size: 24px;
