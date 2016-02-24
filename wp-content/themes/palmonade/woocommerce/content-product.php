@@ -76,7 +76,7 @@ if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 	 */
 	do_action( 'woocommerce_shop_loop_item_title' );
 
-	echo '<p>' . shortenText(strip_tags(get_the_excerpt()), 80) . '</p>';
+	echo '<p>' . shortenText(strip_tags(get_the_excerpt()), 70) . '</p>';
 
 	/**
 	 * woocommerce_after_shop_loop_item_title hook.
