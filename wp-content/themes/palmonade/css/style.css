@@ -2203,6 +2203,10 @@ button.alm-load-more-btn:focus {
 		padding: 30px;
 	}
 
+	.news-banner {
+		height: 200px;
+	}
+
 	.main-blog {
 		border: 0;
 	}
@@ -2435,6 +2439,14 @@ button.alm-load-more-btn:focus {
 		.consultants a {
 			padding: 10px 20px;
 			margin-bottom: 5px;
+		}
+
+	.news-banner {
+		height: 150px;
+	}
+
+		.news-banner .banner-text h2 {
+			font-size: 40px;
 		}
 
 	.blog-posts {
