@@ -85,6 +85,24 @@
 		</div>
 	</footer>
 
+	<!-- Thank You Modal -->
+	<div class="modal fade" id="thankyou_popup" tabindex="-1" role="dialog" aria-labelledby="ThankYouPopup">
+	  	<div class="modal-dialog" role="document">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	   		 		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        		<h4 class="modal-title">Thank you</h4>
+	      		</div>
+
+	      		<div class="modal-body">
+	    			<p>Thank you for contacting Palmonade Kitchens.</p>
+	    			<p>One of our customer service executives will contact you soon.</p>
+	     	 	</div>
+	    	</div>
+	  	</div>
+	</div>
+
+
 <?php wp_footer(); ?>
 </body>
 </html>
