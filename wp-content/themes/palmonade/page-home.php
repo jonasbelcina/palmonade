@@ -56,7 +56,7 @@ get_header(); ?>
 							<h4><?php the_field('contact_box_subtitle'); ?></h4>
 						</div>
 						<p><?php the_field('contact_box_content'); ?></p>
-						<a href="<?php the_field('contact_box_button_link'); ?>"><?php the_field('contact_box_button_text'); ?></a>
+						<a href="" data-toggle="modal" data-target="#contact_popup"><?php the_field('contact_box_button_text'); ?></a>
 					</div>
 				</div>
 			</div>
@@ -171,5 +171,24 @@ get_header(); ?>
 		</div>
 	</div>
 </section>
+
+<!-- Career Modal -->
+<div class="modal fade" id="contact_popup" tabindex="-1" role="dialog" aria-labelledby="ContactPopup">
+  	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+      		<div class="modal-header">
+   		 		<button type="button" data-dismiss="modal" aria-label="Close">
+   		 			<span class="icon-bar"></span>
+   		 			<span class="icon-bar"></span>
+   		 		</button>
+        		<h4 class="modal-title">Contact Us</h4>
+      		</div>
+
+      		<div class="modal-body">
+    			<?php echo do_shortcode('[contact-form-7 id="113" title="Contact Us Popup"]'); ?>
+     	 	</div>
+    	</div>
+  	</div>
+</div>
 
 <?php get_footer(); ?>
