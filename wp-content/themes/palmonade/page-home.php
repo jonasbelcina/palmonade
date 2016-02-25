@@ -147,6 +147,10 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<h2>Our Brands</h2>
+			<?php 
+				$images = get_field('gallery');
+
+			?>
 			<div class="brand-items">
 				<div class="brand-item">
 					Secure Plus FM
