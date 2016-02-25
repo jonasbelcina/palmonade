@@ -31,6 +31,7 @@
 		items: 1,
 		nav: true,
 		loop: true,
+		margin: 15,
 		navText: false,
 		autoplay: true,
 		responsive:{
