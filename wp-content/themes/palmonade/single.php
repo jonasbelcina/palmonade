@@ -31,7 +31,7 @@ get_header(); ?>
 				</nav>
 
 				<div class="side-box posts-filter mobile-post-filter">
-					<h2>Our Shows <span class="glyphicon glyphicon-plus"></span><span class="glyphicon glyphicon-minus"></span></h2>
+					<h2>Categories <span class="glyphicon glyphicon-plus"></span><span class="glyphicon glyphicon-minus"></span></h2>
 					<div class="button-group">
 						<?php if (!is_single()) : ?>
 							<button data-filter="*" class="post-filter-active">All</button>

@@ -37,6 +37,31 @@ get_header(); ?>
 						<span>News and Events</span>
 					</nav>
 
+					<div class="side-box posts-filter mobile-post-filter">
+						<h2>Categories <span class="glyphicon glyphicon-plus"></span><span class="glyphicon glyphicon-minus"></span></h2>
+						<div class="button-group">
+							<?php if (!is_single()) : ?>
+								<button data-filter="*" class="post-filter-active">All</button>
+							<?php else: ?>
+								<a href="<?=home_url()?>/news">All</a>
+							<?php endif; ?>
+							<?php
+								$args = array(
+											'type'			=> 'post',
+											'hide_empty'	=> 0
+										);
+								$categories = get_categories($args);
+								foreach ($categories as $category) { 
+									if ($category->name != 'Uncategorized' && $category->category_parent == 0) : ?>
+										<button data-filter=".<?php echo $category->slug; ?>"><?php echo $category->name; ?></button>
+									<?php 
+									endif;
+								}
+							?>
+						</div>
+					</div>
+
+
 					<div class="blog-posts">
 						<?php if ( have_posts() ) : ?>
 
