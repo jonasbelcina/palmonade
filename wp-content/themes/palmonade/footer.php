@@ -52,10 +52,11 @@
 
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 footer-col">
 						<h2 class="footer-drop">Newsletter <span class="glyphicon glyphicon-menu-down"></span></h2>
-						<form>
+						<!-- <form>
 							<input type="email" placeholder="Enter your Email Address"></input>
 							<input type="submit" value="Join"></input>
-						</form>
+						</form> -->
+						<?php echo do_shortcode('[mc4wp_form id="124"]'); ?>
 
 						<div class="footer-social">
 							<h2>Follow Us</h2>
