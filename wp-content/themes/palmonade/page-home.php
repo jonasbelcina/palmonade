@@ -22,7 +22,7 @@ get_header(); ?>
 						<div class="container">
 							<div class="row">
 								<h2><?php echo the_sub_field('text_line_1'); ?></h2>
-								<h3><?php echo the_sub_field('text_line_1'); ?></h3>
+								<h3><?php echo the_sub_field('text_line_2'); ?></h3>
 							</div>
 						</div>
 					</div>
