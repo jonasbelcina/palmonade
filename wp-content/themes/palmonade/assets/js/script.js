@@ -201,7 +201,7 @@
 		});
 	});
 
-	$('.kitchen-enquiry').on('click', function(){
+	$('.kitchen-enquiry, .catalogue form input[type="submit"]').on('click', function(){
 		var product = $(this).data('product');
 		var page = $(this).data('link');
 		$(".product-hidden").val(product);

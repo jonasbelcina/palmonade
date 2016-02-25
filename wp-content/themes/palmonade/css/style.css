@@ -2053,6 +2053,7 @@ button.alm-load-more-btn:focus {
 	.site-continue:hover {
 		background: #b89359;
 		text-decoration: none;
+		color: #fff;
 	}
 
 
