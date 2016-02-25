@@ -50,7 +50,7 @@
                 		    	<li><a href="<?php echo home_url(); ?>">Home</a></li>
                 		    	<li><a href="<?php echo home_url(); ?>">About Us</a></li>
                 		    	<li><a href="<?php echo home_url(); ?>/product-category/kitchens/">Kitchens</a></li>
-                		    	<li><a href="<?php echo home_url(); ?>">News</a></li>
+                		    	<li><a href="<?php echo home_url(); ?>/news">News</a></li>
                 		    	<li><a href="<?php echo home_url(); ?>">Contact Us</a></li>
                 		    </ul>
             		    </div>
