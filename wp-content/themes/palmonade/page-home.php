@@ -148,30 +148,16 @@ get_header(); ?>
 		<div class="row">
 			<h2>Our Brands</h2>
 			<?php 
-				$images = get_field('gallery');
-
-			?>
-			<div class="brand-items">
-				<div class="brand-item">
-					Secure Plus FM
-				</div>
-
-				<div class="brand-item">
-					Meher &amp; Riddhima
-				</div>
-
-				<div class="brand-item">
-					Interstuhl
-				</div>
-
-				<div class="brand-item">
-					Bristol
-				</div>
-
-				<div class="brand-item">
-					Meher &amp; Riddhima
-				</div>
-			</div>
+				$images = get_field('brands');
+				if( $images ): ?>
+					<div class="brand-items">
+						<?php foreach( $images as $image ): ?>
+							<div class="brand-item">
+								<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+							</div>
+						<?php endforeach; ?>
+					</div>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>
