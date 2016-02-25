@@ -201,4 +201,11 @@
 		});
 	});
 
+	$('.kitchen-enquiry').on('click', function(){
+		var product = $(this).data('product');
+		var page = $(this).data('link');
+		$(".product-hidden").val(product);
+		$(".url-hidden").val(page);
+	});
+
 })(jQuery);

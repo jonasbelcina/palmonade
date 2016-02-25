@@ -44,9 +44,9 @@
 						<ul>
 							<li><a href="<?php echo home_url(); ?>">Home</a></li>
 							<li><a href="<?php echo home_url(); ?>">About us</a></li>
-							<li><a href="<?php echo home_url(); ?>">Kitchens</a></li>
+							<li><a href="<?php echo home_url(); ?>/product-category/kitchens">Kitchens</a></li>
 							<li><a href="<?php echo home_url(); ?>">Our Solutions</a></li>
-							<li><a href="<?php echo home_url(); ?>">Contact</a></li>
+							<li><a href="<?php echo home_url(); ?>/contact-us">Contact</a></li>
 						</ul>
 					</div>
 

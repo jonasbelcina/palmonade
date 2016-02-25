@@ -72,7 +72,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="col-lg-6 col-md-6">
 					<h2><?php the_field('content_heading'); ?></h2>
 					<?php the_content(); ?>
-					<a class="kitchen-enquiry" href="">Send Enquiry</a>
+					<a class="kitchen-enquiry" href="" data-toggle="modal" data-target="#kitchen_enquiry" data-product="<?php the_title(); ?>" data-link="<?php the_permalink(); ?>">Send Enquiry</a>
 				</div>
 
 				<div class="col-lg-6 col-md-6">
@@ -134,5 +134,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<meta itemprop="url" content="<?php the_permalink(); ?>" />
 
 </div><!-- #product-<?php the_ID(); ?> -->
+
+<!-- Product Enquiry Modal -->
+<div class="modal fade" id="kitchen_enquiry" tabindex="-1" role="dialog" aria-labelledby="KitchenEnquiry">
+  	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+      		<div class="modal-header">
+   		 		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        		<h4 class="modal-title">Kitchen Enquiry</h4>
+      		</div>
+
+      		<div class="modal-body">
+      			<h3><?php the_title(); ?></h3>
+    			<?php echo do_shortcode('[contact-form-7 id="114" title="Kitchen Enquiry"]'); ?>
+     	 	</div>
+    	</div>
+  	</div>
+</div>
+
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
