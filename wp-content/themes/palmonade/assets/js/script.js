@@ -208,4 +208,9 @@
 		$(".url-hidden").val(page);
 	});
 
+	$('.site-continue').on('click', function(e){
+		e.preventDefault();
+		$('#thankyou_popup').modal('hide');
+	});
+
 })(jQuery);

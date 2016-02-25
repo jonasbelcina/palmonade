@@ -97,6 +97,7 @@
 	      		<div class="modal-body">
 	    			<p>Thank you for contacting Palmonade Kitchens.</p>
 	    			<p>One of our customer service executives will contact you soon.</p>
+	    			<a class="site-continue" href="">Continue to site</a>
 	     	 	</div>
 	    	</div>
 	  	</div>

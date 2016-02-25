@@ -172,7 +172,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<!-- Career Modal -->
+<!-- Contact Modal -->
 <div class="modal fade" id="contact_popup" tabindex="-1" role="dialog" aria-labelledby="ContactPopup">
   	<div class="modal-dialog" role="document">
     	<div class="modal-content">
