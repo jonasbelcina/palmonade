@@ -208,6 +208,13 @@
 		$(".url-hidden").val(page);
 	});
 
+	$('.catalogue form input[type="submit"]').on('click', function(){
+		var product = $('.kitchen-enquiry').data('product');
+		var page = $('.kitchen-enquiry').data('link');
+		$(".product-hidden").val(product);
+		$(".url-hidden").val(page);
+	});
+
 	$('.site-continue').on('click', function(e){
 		e.preventDefault();
 		$('#thankyou_popup').modal('hide');
