@@ -2528,6 +2528,16 @@ button.alm-load-more-btn:focus {
 			margin: 0;
 		}
 
+	.product {
+		width: 100%;
+		max-width: 330px;
+	}
+
+		.prod-cat-group.alm-listing {
+			max-width: 330px;
+			margin: 0 auto;
+		}
+
 	.kitchen-details-banner {
 		height: auto;
 	}
