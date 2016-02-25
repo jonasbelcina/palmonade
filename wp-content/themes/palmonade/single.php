@@ -27,7 +27,7 @@ get_header(); ?>
 			<div class="col-md-8 main-blog">
 				<nav class="breadcrumbs">
 					<a href="<?=home_url()?>">Home</a>
-					<span>News and Events</span>
+					<a href="<?=home_url()?>/news">News and Events</a>
 				</nav>
 
 				<div class="side-box posts-filter mobile-post-filter">

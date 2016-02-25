@@ -7,12 +7,12 @@
 get_header(); ?>
 
 <div class="container">
-	<nav class="breadcrumbs about-breadcrumbs contact-breadcrumbs">
+	<nav class="breadcrumbs contact-breadcrumbs">
 		<a href="<?=home_url()?>">Home</a>
 		<span>Contact Us</span>
 	</nav>
 
-	<div class="about-us contact-us">
+	<div class="contact-us">
 		<div class="col-md-6">
 			<h2>Our Location</h2>
 			<div class="map-container">
@@ -22,7 +22,7 @@ get_header(); ?>
 
 		<div class="col-md-6">
 			<h2>Contact Us</h2>
-			<?php echo do_shortcode('[contact-form-7 id="208" title="Contact Us form"]')?>
+			<?php echo do_shortcode('[contact-form-7 id="113" title="Contact Us Popup"]')?>
 		</div>
 	</div>
 </div>
