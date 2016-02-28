@@ -63,8 +63,11 @@ get_header(); ?>
 			$ctr = 1;
 			while( have_rows('services') ): the_row();
 				if($ctr == 4) : ?>
+					<div class="clearfix"></div>
 					<div class="services-title">
-						
+						<?php $service_icon = get_field('cycle_image'); ?>
+						<img src="<?php echo $service_icon['url']; ?>" alt="<?php echo $service_icon['alt']; ?>" />
+						<h3>Our Services Cycle</h3>
 					</div>
 				<?php endif; ?>
 
