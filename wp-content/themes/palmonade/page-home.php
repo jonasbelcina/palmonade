@@ -19,7 +19,7 @@ get_header(); ?>
 
 				<div class="banner-item">
 					<img class="desktop-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-					<img class="mobile-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+					<img class="mobile-img" src="<?php echo $mob_img['url']; ?>" alt="<?php echo $mob_img['alt']; ?>">
 					<div class="banner-caption">
 						<div class="container">
 							<div class="row">
