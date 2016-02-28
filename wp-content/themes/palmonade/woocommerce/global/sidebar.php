@@ -40,7 +40,7 @@ $cat = $wp_query->get_queried_object();
 			foreach ($top_parent as $parent) { ?>
 				<?php
 					if($parent->count > 0) {
-						$this_parent_class = '<span class="glyphicon glyphicon-plus"></span>';
+						$this_parent_class = '<span class="glyphicon glyphicon-minus"></span>';
 					}
 					else {
 						$this_parent_class = '';

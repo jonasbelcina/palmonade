@@ -2359,6 +2359,10 @@ button.alm-load-more-btn:focus {
 */
 
 @media only screen and (max-width : 1199px) {
+	.navbar-default .navbar-nav > li > a {
+		margin: 0 25px;
+	}
+
 	.home-contact {
 		margin-top: 30px;
 	}
@@ -2455,7 +2459,8 @@ button.alm-load-more-btn:focus {
 @media only screen and (max-width : 991px) {
 	.navbar-default .navbar-nav > li > a {
 		font-size: 16px;
-		padding: 15px 17px;
+		padding: 15px 5px;
+		margin: 0 10px;
 	}
 
 	.banner-caption {
