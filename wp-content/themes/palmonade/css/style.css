@@ -597,6 +597,12 @@ header {
 		color: #756d62;
 	}
 
+	.brand-item img {
+		max-width: 100%;
+		margin: 0 auto;
+		width: auto !important;
+	}
+
 	.brand-items .owl-controls {
 		position: absolute;
 		top: 30%;
@@ -1021,14 +1027,6 @@ footer {
 
 			.footer-social a:nth-child(3) {
 				background: url("../assets/images/icon-twitter.png");
-			}
-
-			.footer-social a:nth-child(4) {
-				background: url("../assets/images/icon-pinterest.png");
-			}
-
-			.footer-social a:nth-child(5) {
-				background: url("../assets/images/icon-tumbler.png");
 			}
 
 			.footer-social a:last-child {
