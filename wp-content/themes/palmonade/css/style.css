@@ -499,6 +499,7 @@ header {
 			}
 
 		.testimonial-content p {
+			margin: 0;
 			position: relative;
 			top: 50%;
 			-webkit-transform: translateY(-50%);
@@ -536,7 +537,7 @@ header {
 			font-size: 20px;
 			color: #bd9c68;
 			position: absolute;
-			top: 0;
+			top: -2px;
 			left: 0;
 		}
 
@@ -551,7 +552,7 @@ header {
 			font-size: 20px;
 			color: #bd9c68;
 			position: absolute;
-			top: 0;
+			top: -2px;
 			right: 0;
 		}
 
@@ -2094,6 +2095,23 @@ button.alm-load-more-btn:focus {
 
 		.testimonial-content {
 			height: auto;
+		}
+
+		.testimonial-content p {
+			top: initial;
+			-webkit-transform: none;
+			   -moz-transform: none;
+			   	-ms-transform: none;
+					transform: none;
+		}
+
+		.testimonial-by {
+			margin-top: 10px;
+		}
+
+		.testimonial-items .owl-controls {
+			bottom: initial;
+			top: 40%;
 		}
 
 	.home-news-article h2 {
