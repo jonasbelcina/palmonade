@@ -14,10 +14,12 @@ get_header(); ?>
 	<div class="home-banner">
 		<?php if( have_rows('slides') ):
 			while( have_rows('slides') ): the_row(); 
-				$image = get_sub_field('image'); ?>
+				$image = get_sub_field('image'); 
+				$mob_img = get_sub_field('mobile_image'); ?>
 
 				<div class="banner-item">
-					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+					<img class="desktop-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+					<img class="banner-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
 					<div class="banner-caption">
 						<div class="container">
 							<div class="row">

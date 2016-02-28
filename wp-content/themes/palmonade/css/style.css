@@ -190,6 +190,10 @@ header {
 		object-fit: cover;
 	}
 
+	.banner-img {
+		display: none;
+	}
+
 	.banner-caption {
 		background: rgba(0,0,0,0.6);
 		position: absolute;
@@ -386,6 +390,14 @@ header {
 	border: 1px solid #ebebeb;
 	padding: 50px 30px;
 }
+	
+	.home-news-content h2 {
+		color: #c0a06e;
+		font-size: 24px;
+		text-transform: uppercase;
+		text-align: center;
+		margin: 0 0 30px;
+	}
 
 	.home-news-article {
 		padding: 0 20px;
@@ -396,6 +408,8 @@ header {
 			text-transform: uppercase;
 			margin: 0 0 13px;
 			line-height: 30px;
+			color: #333;
+			text-align: left;
 		}
 
 		.news-date {
@@ -1675,7 +1689,7 @@ footer {
 		font-size: 42px;
 		letter-spacing: 2px;
 		color: #fff;
-		/*text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);*/
+		text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
 	}
 
 	.product-cat-banner-content p {
@@ -1684,7 +1698,7 @@ footer {
 		font-style: italic;
 		letter-spacing: 1px;
 		color: #fff;
-		/*text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8);*/
+		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
 	}
 
 .product-listing {
@@ -2607,6 +2621,26 @@ button.alm-load-more-btn:focus {
 }
 
 @media only screen and (max-width : 768px) {
+	.banner {
+		height: auto;
+	}
+
+		.home-banner,
+		.home-banner .owl-stage-outer,
+		.home-banner .owl-stage,
+		.home-banner .owl-item,
+		.banner-item {
+			height: auto;
+		}
+
+	.desktop-img {
+		display: none;
+	}
+
+	.banner-img {
+		display: block;
+	}
+
 	.header-contact {
 		padding-right: 15px;
 		margin-top: 28px;
