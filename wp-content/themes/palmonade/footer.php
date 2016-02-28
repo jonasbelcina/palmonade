@@ -16,7 +16,7 @@
 				<div class="row">
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 footer-col">
 						<div class="row">
-							<h2 class="footer-drop">Address <span class="glyphicon glyphicon-menu-down"></span></h2>
+							<h2>Address</h2>
 							<?php the_field('address' , 'options'); ?>
 
 							<div class="footer-contact">

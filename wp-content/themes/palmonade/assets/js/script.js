@@ -42,10 +42,10 @@
 		        items:1
 		    },
 		    420:{
-		        items:2
+		        items:1
 		    },
 		    568:{
-		        items:3
+		        items:2
 		    },
 		    767:{
 		        items:4

@@ -579,11 +579,15 @@ header {
 		font-size: 24px;
 		text-transform: uppercase;
 		text-align: center;
-		margin: 0 0 60px;
+		margin: 0 0 25px;
 	}
 
 	.brand-items {
 
+	}
+
+	.brand-items .owl-item {
+		overflow: hidden;
 	}
 
 	.brand-item {
@@ -2739,6 +2743,10 @@ button.alm-load-more-btn:focus {
 		height: auto;
 	}
 
+	.home-brands {
+		padding: 25px;
+	}
+
 	.footer-copyright {
 		padding: 20px 15px;
 	}
@@ -2916,6 +2924,10 @@ button.alm-load-more-btn:focus {
 		overflow: hidden;
 		-webkit-transition: max-height 0.3s linear;
 			    transition: max-height 0.3s linear;
+	}
+
+	.footer-col:first-child {
+		max-height: 100%;
 	}
 
 	.footer-col.opened {
