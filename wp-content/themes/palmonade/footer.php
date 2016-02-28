@@ -41,13 +41,14 @@
 
 					<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 footer-col">
 						<h2 class="footer-drop">Quick Links <span class="glyphicon glyphicon-menu-down"></span></h2>
-						<ul>
+						<!-- <ul>
 							<li><a href="<?php echo home_url(); ?>">Home</a></li>
 							<li><a href="<?php echo home_url(); ?>">About us</a></li>
 							<li><a href="<?php echo home_url(); ?>/product-category/kitchens">Kitchens</a></li>
 							<li><a href="<?php echo home_url(); ?>">Our Solutions</a></li>
 							<li><a href="<?php echo home_url(); ?>/contact-us">Contact</a></li>
-						</ul>
+						</ul> -->
+						<?php wp_nav_menu( array( 'theme_location' => 'quick-links' ) ); ?>
 					</div>
 
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 footer-col">
