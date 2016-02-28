@@ -446,7 +446,8 @@ header {
 			text-transform: uppercase;
 		}
 
-	.mobile-articles {
+	.mobile-articles,
+	.mobile-articles-title {
 		display: none !important;
 	}
 
@@ -2746,6 +2747,10 @@ button.alm-load-more-btn:focus {
 
 	.news-articles {
 		display: none;
+	}
+
+	.mobile-articles-title {
+		display: block !important;
 	}
 
 	.mobile-articles {

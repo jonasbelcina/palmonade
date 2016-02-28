@@ -97,8 +97,8 @@ get_header(); ?>
 					?>
 				</div>
 
+				<h2 class="mobile-articles-title"><?php the_field('home_news_heading'); ?></h2>
 				<div class="mobile-articles col-lg-8 col-md-12">
-					<h2><?php the_field('home_news_heading'); ?></h2>
 					<?php
 						$args = array(
 							'posts_per_page'      => 2,
