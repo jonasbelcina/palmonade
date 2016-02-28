@@ -34,8 +34,8 @@
 
 		                <div class="header-contact">
 	                		<ul>
-	                			<li><a href="mailto:info@palmonade.com">info@palmonade.com</a></li>
-	                			<li>+971 455 8844 99</li>
+	                			<li><a href="mailto:<?php the_field('email' , 'options'); ?>"><?php the_field('email' , 'options'); ?></a></li>
+	                			<li><?php the_field('phone' , 'options'); ?></li>
 	                		</ul>
 		                </div>
 

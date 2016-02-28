@@ -35,7 +35,7 @@
 
 					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 footer-col">
 						<div class="google-maps">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14121.846985526518!2d55.064236492646906!3d24.960723569919708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f0deaff2b8909%3A0x50e23a1aa9a6ce83!2sBusiness+Storage+Solutions!5e0!3m2!1sen!2s!4v1456040469540" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d115710.16161941792!2d55.086565!3d25.002068000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8dfba9f28eae0a2e!2sPalmon+Group!5e0!3m2!1sen!2sae!4v1456668576541" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 						</div>
 					</div>
 
