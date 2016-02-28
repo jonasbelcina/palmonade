@@ -51,7 +51,7 @@ $cat = $wp_query->get_queried_object();
 		if($cat->parent == 0) :
 			$banner_img = get_field('banner_image', 'product_cat_' . $cat->term_id); ?>
 
-			<section class="product-cat-banner" style="background: url(<?php echo $banner_img['url']; ?>) center no-repeat;">
+			<section class="product-cat-banner" style="background: url(<?php echo $banner_img['url']; ?>) center no-repeat; background-size: cover;">
 				<div class="container">
 					<div class="product-cat-banner-content">
 						<h2><?php the_field('banner_text', 'product_cat_' . $cat->term_id); ?></h2>
