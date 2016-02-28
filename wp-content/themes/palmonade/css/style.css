@@ -2380,6 +2380,16 @@ button.alm-load-more-btn:focus {
 					transform: translateX(-50%);
 		}
 
+		.testimonial-content:before {
+			top: 4px;
+			left: 11px;
+		}
+
+		.testimonial-content:after {
+			bottom: 4px;
+			right: 11px;
+		}
+
 		.testimonial-content {
 			height: auto;
 		}
