@@ -59,8 +59,13 @@ get_header(); ?>
 
 <section class="services-cycle">
 	<div class="container">
-		<?php if( have_rows('services') ): ?>
-			<?php while( have_rows('services') ): the_row(); ?>
+		<?php if( have_rows('services') ):
+			$ctr = 1;
+			while( have_rows('services') ): the_row();
+				if($ctr == 4) : ?>
+					<div class="clearfix"></div>
+				<?php endif; ?>
+
 				<div class="col-md-4">
 					<div class="service-cycle">
 						<div class="col-md-4">
@@ -73,8 +78,9 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
-			<?php endwhile; ?>
-		<?php endif; ?>
+			<?php $ctr++;
+			endwhile;
+		endif; ?>
 	</div>
 </section>
 
