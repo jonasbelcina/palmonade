@@ -136,8 +136,10 @@ header {
 		.navbar-default .navbar-nav > li > a {
 			font-size: 20px;
 			color: #fff;
-			padding: 15px 35px;
+			padding: 15px 5px;
 			position: relative;
+			margin: 0 30px;
+			border-bottom: 2px solid transparent;
 		}
 
 			.navbar-default .navbar-nav > li > a:hover {
@@ -145,11 +147,16 @@ header {
 				color: #c0a06e;
 			}
 
+			.navbar-default .navbar-nav > li > a.current-page {
+				border-color: #c0a06e;
+				color: #c0a06e;
+			}
+
 			.navbar-default .navbar-nav > li > a:focus {
 				color: #fff;
 			}
 
-			.navbar-default .navbar-nav > li:nth-child(3) > a:before {
+			/*.navbar-default .navbar-nav > li:nth-child(3) > a:before {
 				content: url("../assets/images/menu-dropdown.png");
 				position: absolute;
 				left: 50%;
@@ -159,7 +166,7 @@ header {
 			       -moz-transform: translateX(-50%);
 				    -ms-transform: translateX(-50%);
 				        transform: translateX(-50%);
-			}
+			}*/
 
 			.navbar-default .navbar-nav > li:last-child > a {
 				padding-right: 0;
@@ -2620,6 +2627,10 @@ button.alm-load-more-btn:focus {
 		margin-bottom: 40px;
 	}
 
+	.prod-cat-group .product p {
+		min-height: 100px;
+	}
+
 }
 
 @media only screen and (max-width : 768px) {
@@ -2747,6 +2758,10 @@ button.alm-load-more-btn:focus {
 
 	.footer-copyright {
 		padding: 20px 15px;
+	}
+
+	.prod-cat-group .product p {
+		min-height: 60px;
 	}
 
 	.kitchen-details-banner .banner-caption {
@@ -2966,6 +2981,10 @@ button.alm-load-more-btn:focus {
 		.prod-cat-group.alm-listing {
 			max-width: 330px;
 			margin: 0 auto;
+		}
+
+		.prod-cat-group .product p {
+			min-height: initial;
 		}
 
 	.kitchen-details-banner {
