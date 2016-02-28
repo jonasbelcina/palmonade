@@ -1037,6 +1037,10 @@ footer {
 				background: url("../assets/images/icon-twitter.png");
 			}
 
+			.footer-social a:nth-child(3) {
+				background: url("../assets/images/insta.png");
+			}
+
 			.footer-social a:last-child {
 				background: url("../assets/images/icon-youtube.png");
 			}
