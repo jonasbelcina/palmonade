@@ -477,10 +477,11 @@ header {
 			padding: 20px 30px;
 			font-size: 18px;
 			color: #676666;
-			line-height: 32px;
+			line-height: 28px;
 			position: relative;
 			border-radius: 5px;
 			overflow: hidden;
+			height: 358px;
 		}
 
 			.testimonial-content:before {
