@@ -1251,7 +1251,7 @@ footer {
 	.posts-filter button:hover,
 	.posts-filter button.post-filter-active {
 	    background: #231f20;
-	    /*color: #fff;*/
+	    color: #fff;
 	}
 
 	.posts-filter button:focus {
