@@ -474,14 +474,14 @@ header {
 
 		.testimonial-content {
 			background: #ededed;
-			padding: 20px 30px;
+			padding: 20px 25px;
 			font-size: 18px;
 			color: #676666;
 			line-height: 28px;
 			position: relative;
 			border-radius: 5px;
 			overflow: hidden;
-			height: 347px;
+			height: 322px;
 		}
 
 			.testimonial-content:before {
