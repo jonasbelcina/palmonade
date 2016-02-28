@@ -2114,6 +2114,14 @@ button.alm-load-more-btn:focus {
 			top: 40%;
 		}
 
+		.testimonial-items .owl-prev:before {
+			left: -20px;
+		}
+
+		.testimonial-items .owl-next:before {
+			right: -20px;
+		}
+
 	.home-news-article h2 {
 		height: 60px;
 	}
