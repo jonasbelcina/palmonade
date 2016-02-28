@@ -618,6 +618,59 @@ header {
 		right: -30px;
 	}
 
+.about-us {
+	padding: 50px 0;
+}
+
+	.about-us h2 {
+		font-size: 28px;
+		font-family: 'GraphieBold';
+		color: #c0a06e;
+		text-transform: uppercase;
+		text-align: center;
+		letter-spacing: 1px;
+		margin: 0 0 65px;
+		position: relative;
+	}
+
+	.company p {
+		color: #676666;
+		font-size: 20px;
+		line-height: 30px;
+		margin-bottom: 20px;
+	}
+
+	.values-heading {
+		margin-top: 45px !important;
+	}
+
+	.company ul {
+		padding-left: 14px;
+	}
+
+	.company li {
+	    color: #676666;
+	    font-size: 18px;
+	    list-style-image: url("../assets/images/list.png");
+	    text-indent: 10px;
+	    margin-bottom: 5px;
+	}
+
+		.about-us h2:after {
+		    content: url("../assets/images/about-separator.png");
+		    position: absolute;
+		    left: 50%;
+		    -webkit-transform: translateX(-50%);
+		    -moz-transform: translateX(-50%);
+		    -ms-transform: translateX(-50%);
+		    transform: translateX(-50%);
+		    bottom: -35px;
+		}
+
+	.director-img {
+		float: right;
+	}
+
 footer {
 	background: #242424;
 }
