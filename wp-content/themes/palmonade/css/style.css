@@ -190,8 +190,8 @@ header {
 		object-fit: cover;
 	}
 
-	.banner-img {
-		display: none;
+	.mobile-img {
+		display: none !important;
 	}
 
 	.banner-caption {
@@ -2634,11 +2634,11 @@ button.alm-load-more-btn:focus {
 		}
 
 	.desktop-img {
-		display: none;
+		display: none !important;
 	}
 
-	.banner-img {
-		display: block;
+	.mobile-img {
+		display: block !important;
 	}
 
 	.header-contact {
