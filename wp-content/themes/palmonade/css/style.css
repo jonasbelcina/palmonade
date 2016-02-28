@@ -1675,13 +1675,17 @@ footer {
 }
 
 .product-cat-banner {
-	height: 300px;
-	background-size: cover;
+	/*height: 300px;
+	background-size: cover;*/
 }
 
 .product-cat-banner > .container {
 	height: inherit;
 }
+
+	.product-cat-banner img {
+		width: 100%;
+	}
 
 	.product-cat-banner-content {
 		font-family: 'GraphieRegular';

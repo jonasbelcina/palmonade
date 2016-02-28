@@ -49,14 +49,21 @@ $cat = $wp_query->get_queried_object();
 
 	<?php
 		if($cat->parent == 0) :
-			$banner_img = get_field('banner_image', 'product_cat_' . $cat->term_id); ?>
+			$banner_img = get_field('banner_image', 'product_cat_' . $cat->term_id);
+			$banner_img = get_field('mobile_banner_image', 'product_cat_' . $cat->term_id); ?>
 
-			<section class="product-cat-banner" style="background: url(<?php echo $banner_img['url']; ?>) center no-repeat; background-size: cover;">
+			<!-- <section class="product-cat-banner" style="background: url(<?php echo $banner_img['url']; ?>) center no-repeat; background-size: cover;">
 				<div class="container">
 					<div class="product-cat-banner-content">
 						<h2><?php the_field('banner_text', 'product_cat_' . $cat->term_id); ?></h2>
 						<p><?php the_field('banner_subtext', 'product_cat_' . $cat->term_id); ?></p>
 					</div>
+				</div>
+			</section> -->
+			<section class="product-cat-banner">
+				<div class="container">
+					<img src="<?php echo $banner_img['url']; ?>" alt="<?php echo $banner_img['alt'] ?>" />
+					<img src="<?php echo $mobile_img['url']; ?>" alt="<?php echo $mobile_img['alt'] ?>" />
 				</div>
 			</section>
 	<?php endif; ?>

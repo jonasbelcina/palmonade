@@ -63,6 +63,7 @@
 							<h2>Follow Us</h2>
 							<a href="<?php the_field('facebook' , 'options'); ?>" target="_blank"></a>
 							<a href="<?php the_field('twitter' , 'options'); ?>" target="_blank"></a>
+							<a href="<?php the_field('instagram' , 'options'); ?>" target="_blank"></a>
 							<a href="<?php the_field('youtube' , 'options'); ?>" target="_blank"></a>
 						</div>
 					</div>
