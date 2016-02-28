@@ -117,6 +117,7 @@ function twentysixteen_setup() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'twentysixteen' ),
 		'social'  => __( 'Social Links Menu', 'twentysixteen' ),
+		'quick-links'  => __( 'Quick Links Menu', 'twentysixteen' ), // add quick links menu location
 	) );
 
 	/*
