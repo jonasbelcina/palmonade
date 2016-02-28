@@ -22,7 +22,7 @@ get_header(); ?>
 				<h2><?php the_field('director_heading'); ?></h2>
 				<?php $director_img = get_field('director_image'); ?>
 				<div class="director-img">
-					<img class="img-responsive" src="<?php echo $director_image['url']; ?>" alt="<?php echo $director_image['alt']; ?>">
+					<img class="img-responsive" src="<?php echo $director_img['url']; ?>" alt="<?php echo $director_img['alt']; ?>">
 					<span><?php the_field('director_position_name'); ?></span>
 				</div>
 
