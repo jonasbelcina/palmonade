@@ -40,7 +40,26 @@ get_header(); ?>
 		<div class="row">
 			<h2><?php the_field('timeline_heading'); ?></h2>
 
+			<?php if( have_rows('timeline') ): ?>
+				<ul>
+				<?php while( have_rows('timeline') ): the_row(); ?>
+					<li>
+						<div class="timeline-bubble <?php if($ctr == 2) { ?>long-bubble<?php } ?>">
+							<h3><?php the_sub_field('heading'); ?></h3>
+							<p><?php the_sub_field('content'); ?></p>
+							<span><?php the_sub_field('year'); ?></span>
+						</div>
+					</li>
+				<?php endwhile; ?>
+				</ul>
+			<?php endif; ?>
 		</div>
+	</div>
+</section>
+
+<section class="services-cycle">
+	<div class="container">
+		
 	</div>
 </section>
 
