@@ -44,7 +44,7 @@ get_header(); ?>
 				<ul>
 				<?php while( have_rows('timeline') ): the_row(); ?>
 					<li>
-						<div class="timeline-bubble <?php if($ctr == 2) { ?>long-bubble<?php } ?>">
+						<div class="timeline-bubble">
 							<h3><?php the_sub_field('heading'); ?></h3>
 							<p><?php the_sub_field('content'); ?></p>
 							<span><?php the_sub_field('year'); ?></span>
@@ -59,7 +59,22 @@ get_header(); ?>
 
 <section class="services-cycle">
 	<div class="container">
-		
+		<?php if( have_rows('services') ): ?>
+			<?php while( have_rows('services') ): the_row(); ?>
+				<div class="col-md-4">
+					<div class="service-cycle">
+						<div class="col-md-4">
+							<?php $icon = get_sub_field('icon'); ?>
+							<img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" />
+						</div>
+						<div class="col-md-8">
+							<h3><?php the_sub_field('service_name'); ?></h3>
+							<p><?php the_sub_field('content'); ?></p>
+						</div>
+					</div>
+				</div>
+			<?php endwhile; ?>
+		<?php endif; ?>
 	</div>
 </section>
 
