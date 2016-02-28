@@ -481,7 +481,7 @@ header {
 			position: relative;
 			border-radius: 5px;
 			overflow: hidden;
-			height: 322px;
+			height: 317px;
 		}
 
 			.testimonial-content:before {
@@ -497,6 +497,15 @@ header {
 				right: 23px;
 				bottom: 13px;
 			}
+
+		.testimonial-content p {
+			position: relative;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			   -moz-transform: translateY(-50%);
+			   	-ms-transform: translateY(-50%);
+					transform: translateY(-50%);
+		}
 
 		.testimonial-by {
 			font-size: 18px;
@@ -659,7 +668,8 @@ footer {
 			color: #d8d8d8;
 		}
 
-			.footer-top a:hover {
+			.footer-top a:hover,
+			.footer-top a.current-menu-item {
 				color: #c0a06e;
 				text-decoration: none;
 				-webkit-transition: all 0.3s linear;
