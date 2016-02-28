@@ -2788,6 +2788,14 @@ button.alm-load-more-btn:focus {
 		padding: 20px 15px;
 	}
 
+	.product-cat-banner img:first-child {
+		display: none;
+	}
+
+	.product-cat-banner img:last-child {
+		display: block;
+	}
+
 	.prod-cat-group .product p {
 		min-height: 60px;
 	}
