@@ -34,4 +34,14 @@ get_header(); ?>
 	</div>
 </section>
 
+<?php $timeline_bg = get_field('timeline_bg_image'); ?>
+<section class="timeline about-us" <?php if($timeline_bg) { ?>style="background: url(<?php echo $timeline_bg['url']; ?>) center no-repeat; background-size: cover;"<?php } ?>>
+	<div class="container">
+		<div class="row">
+			<h2><?php the_field('timeline_heading'); ?></h2>
+
+		</div>
+	</div>
+</section>
+
 <?php get_footer(); ?>

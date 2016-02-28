@@ -669,6 +669,23 @@ header {
 
 	.director-img {
 		float: right;
+		margin-left: 20px;
+		margin-bottom: 35%;
+	}
+
+		.director-img span {
+			float: right;
+			color: #676666;
+			font-family: 'GraphieLight';
+			margin-top: 5px;
+		}
+
+	.director-msg {
+		color: #676666;
+		font-family: 'GraphieExtraLight';
+		font-size: 28px;
+		line-height: 34px;
+		padding: 0 15px;
 	}
 
 footer {
