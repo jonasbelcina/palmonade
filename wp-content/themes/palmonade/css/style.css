@@ -2983,6 +2983,22 @@ button.alm-load-more-btn:focus {
 			margin: 0;
 		}
 
+	.product-cat-banner {
+		position: relative;
+	}
+
+	.product-cat-banner-content {
+		top: initial;
+		position: absolute;
+		width: 100%;
+		bottom: 15px;
+		right: 15px;
+		-webkit-transform: translateY(0);
+		   -moz-transform: translateY(0);
+		    -ms-transform: translateY(0);
+			transform: translateY(0);
+	}
+
 	.products .product {
 		width: 100%;
 		max-width: 330px;
