@@ -63,7 +63,9 @@ get_header(); ?>
 			$ctr = 1;
 			while( have_rows('services') ): the_row();
 				if($ctr == 4) : ?>
-					<div class="clearfix"></div>
+					<div class="services-title">
+						
+					</div>
 				<?php endif; ?>
 
 				<div class="col-md-4">
