@@ -474,7 +474,7 @@ header {
 
 		.testimonial-content {
 			background: #ededed;
-			padding: 20px 25px;
+			padding: 20px 20px;
 			font-size: 18px;
 			color: #676666;
 			line-height: 28px;
@@ -2080,6 +2080,10 @@ button.alm-load-more-btn:focus {
 			   -moz-transform: translateX(-50%);
 			    -ms-transform: translateX(-50%);
 					transform: translateX(-50%);
+		}
+
+		.testimonial-content {
+			height: auto;
 		}
 
 	.home-news-article h2 {
