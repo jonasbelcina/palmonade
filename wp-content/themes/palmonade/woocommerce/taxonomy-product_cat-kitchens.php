@@ -39,7 +39,7 @@ $cat = $wp_query->get_queried_object();
 	<?php
 		if($cat->parent == 0) :
 			$banner_img = get_field('banner_image', 'product_cat_' . $cat->term_id);
-			$banner_img = get_field('mobile_banner_image', 'product_cat_' . $cat->term_id); ?>
+			$mobile_img = get_field('mobile_banner_image', 'product_cat_' . $cat->term_id); ?>
 
 			<!-- <section class="product-cat-banner" style="background: url(<?php echo $banner_img['url']; ?>) center no-repeat; background-size: cover;">
 				<div class="container">

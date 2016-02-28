@@ -1687,6 +1687,10 @@ footer {
 		width: 100%;
 	}
 
+	.product-cat-banner img:last-child {
+		display: none;
+	}
+
 	.product-cat-banner-content {
 		font-family: 'GraphieRegular';
 		text-align: right;
