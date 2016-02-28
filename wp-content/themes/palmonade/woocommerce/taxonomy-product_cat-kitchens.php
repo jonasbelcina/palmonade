@@ -50,10 +50,10 @@ $cat = $wp_query->get_queried_object();
 				</div>
 			</section> -->
 			<section class="product-cat-banner">
-				<div class="container">
+				<!-- <div class="container"> -->
 					<img class="img-responsive" src="<?php echo $banner_img['url']; ?>" alt="<?php echo $banner_img['alt'] ?>" />
 					<img class="img-responsive" src="<?php echo $mobile_img['url']; ?>" alt="<?php echo $mobile_img['alt'] ?>" />
-				</div>
+				<!-- </div> -->
 			</section>
 	<?php endif; ?>
 
