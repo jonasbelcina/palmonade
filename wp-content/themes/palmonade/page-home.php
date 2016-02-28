@@ -69,6 +69,7 @@ get_header(); ?>
 		<div class="row">
 			<div class="home-news-content">
 				<div class="news-articles col-lg-8 col-md-12">
+					<h2><?php the_field('home_news_heading'); ?></h2>
 					<?php
 						$args = array(
 							'posts_per_page'      => 2,
@@ -95,6 +96,7 @@ get_header(); ?>
 				</div>
 
 				<div class="mobile-articles col-lg-8 col-md-12">
+					<h2><?php the_field('home_news_heading'); ?></h2>
 					<?php
 						$args = array(
 							'posts_per_page'      => 2,
