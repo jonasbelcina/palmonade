@@ -111,14 +111,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="col-sm-4 contact-icon-col">
 				<div class="contact-icon-wrap">
 					<h2>Office</h2>
-					<h3>12 East Street, Dubai</h3>
+					<h3>Bldg 7, Street N606, JAFZA Dubai</h3>
 				</div>
 			</div>
 
 			<div class="col-sm-4 contact-icon-col">
 				<div class="contact-icon-wrap">
 					<h2>Phone</h2>
-					<h3>+971 455 8844 99</h3>
+					<h3><?php the_field('phone' , 'options'); ?></h3>
 				</div>
 			</div>
 
