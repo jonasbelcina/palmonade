@@ -18,7 +18,7 @@ get_header(); ?>
 				endif; ?>
 			</div>
 
-			<div class="col-md-6">
+			<div class="col-md-6 director-col">
 				<h2><?php the_field('director_heading'); ?></h2>
 				<?php $director_img = get_field('director_image'); ?>
 				<div class="director-img">

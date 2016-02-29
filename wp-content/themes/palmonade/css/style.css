@@ -1070,7 +1070,7 @@ header {
 			}
 
 			.mobile-cycle-slides .owl-item {
-				padding: 3px 0;
+				padding: 3px;
 			}
 
 			.mobile-cycle-slides .service-cycle {
@@ -2990,6 +2990,10 @@ button.alm-load-more-btn:focus {
 		display: none;
 	}
 
+	.director-col {
+		margin-top: 45px;
+	}
+
 	.consultants.about-us {
 		padding-bottom: 50px;
 	}
@@ -3466,6 +3470,15 @@ button.alm-load-more-btn:focus {
 	.testimonial-content {
 		font-size: 17px;
 		line-height: 26px;
+	}
+
+	.about-us {
+		/*padding: 30px;*/
+	}
+
+	.director-msg {
+		font-size: 21px;
+		line-height: 28px;
 	}
 
 	.timeline-bubble {
