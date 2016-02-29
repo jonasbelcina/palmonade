@@ -316,7 +316,7 @@ header {
 	}
 
 	.home-read-more {
-		color: #c0a06e;
+		color: #b89359;
 		margin-top: 10px;
 		font-family: 'GraphieRegular';
 		display: inline-block;
@@ -324,7 +324,7 @@ header {
 
 		.home-read-more:hover,
 		.home-read-more:focus {
-			color: #c0a06e;
+			color: #b89359;
 			text-decoration: none;
 		}
 
