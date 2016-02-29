@@ -1412,6 +1412,10 @@ footer {
 			margin: 30px 0 0;
 		}
 
+		#footer-newsletter:focus {
+			outline: none;
+		}
+
 		.footer-top form {
 			margin: 30px 0 0;
 			position: relative;
