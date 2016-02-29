@@ -88,6 +88,23 @@
 		autoplay: true
 	});
 
+	$('.mobile-cycle-slides').owlCarousel({
+		items: 3,
+		nav: true,
+		loop: true,
+		margin: 15,
+		navText: false,
+		autoplay: true,
+		responsive:{
+		    0:{
+		        items:1
+		    },
+		    767:{
+		        items:2
+		    }
+		}
+	});
+
 	$('.footer-drop').on('click', function() {
 		$(this).closest('.footer-col').toggleClass('opened');
 		if($(this).find('span').hasClass('glyphicon-menu-down')) {

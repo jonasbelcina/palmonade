@@ -89,6 +89,29 @@ get_header(); ?>
 				endwhile; ?>
 
 			</div>
+
+			<div class="mobile-cycle">
+				<div class="services-title">
+					<?php $service_icon = get_field('cycle_image'); ?>
+					<img src="<?php echo $service_icon['url']; ?>" alt="<?php echo $service_icon['alt']; ?>" />
+					<h3>Our Services Cycle</h3>
+				</div>
+
+				<div class="mobile-cycle-slides">
+					<?php while( have_rows('services') ): the_row(); ?>
+						<div class="service-cycle">
+							<div class="col-xs-4">
+								<?php $icon = get_sub_field('icon'); ?>
+								<img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>" />
+							</div>
+							<div class="col-xs-8">
+								<h3><?php the_sub_field('service_name'); ?></h3>
+								<p><?php the_sub_field('content'); ?></p>
+							</div>
+						</div>
+					<?php endwhile; ?>
+				</div>
+			</div>
 		<?php endif; ?>
 	</div>
 </section>
@@ -145,7 +168,7 @@ get_header(); ?>
 <section class="why-us about-us">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 why-us-content">
+			<div class="col-lg-6 why-us-content">
 				<h2><?php the_field('why_us_heading'); ?></h2>
 				<p><?php the_field('why_us_text'); ?></p>
 
@@ -161,7 +184,7 @@ get_header(); ?>
 				<?php endif; ?>
 			</div>
 
-			<div class="col-md-6 why-us-contact">
+			<div class="col-lg-6 why-us-contact">
 				<div class="home-contact">
 					<?php $contact_box_image = get_field('contact_box_background_image', 5); ?>
 					<img class="img-responsive" src="<?php echo $contact_box_image['url']; ?>" alt="<?php echo $contact_box_image['alt']; ?>" />

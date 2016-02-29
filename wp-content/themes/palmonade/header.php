@@ -48,7 +48,7 @@
                 		<div id="navbar" class="navbar-collapse collapse">
                 		    <ul class="nav navbar-nav">
                 		    	<li><a href="<?php echo home_url(); ?>" <?php if(is_front_page()) { ?>class="current-page"<?php } ?>>Home</a></li>
-                		    	<li><a href="<?php echo home_url(); ?>/about-us">About Us</a></li>
+                		    	<li><a href="<?php echo home_url(); ?>/about-us" <?php if(is_page('141')) { ?>class="current-page"<?php } ?>>About Us</a></li>
                 		    	<li><a href="<?php echo home_url(); ?>/product-category/kitchens/" <?php if(is_product_category('kitchens')) { ?>class="current-page"<?php } ?>>Kitchens</a></li>
                 		    	<li><a href="<?php echo home_url(); ?>/news" <?php if(is_home()) { ?>class="current-page"<?php } ?>>News</a></li>
                 		    	<li><a href="<?php echo home_url(); ?>/contact-us" <?php if(is_page('115')) { ?>class="current-page"<?php } ?>>Contact Us</a></li>
