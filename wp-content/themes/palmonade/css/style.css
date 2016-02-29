@@ -2862,7 +2862,7 @@ button.alm-load-more-btn:focus {
 
 	.director-img {
 		float: none;
-		margin-bottom: 20px;
+		margin: 0 0 20px;
 		text-align: center;
 	}
 
@@ -3473,17 +3473,66 @@ button.alm-load-more-btn:focus {
 	}
 
 	.about-us {
-		/*padding: 30px;*/
+		padding: 30px 0;
 	}
+
+		.about-us h2 {
+			margin-bottom: 35px;
+		}
+
+		.about-us h2:after {
+			bottom: -25px;
+		}
 
 	.director-msg {
 		font-size: 21px;
 		line-height: 28px;
 	}
 
+	.services-cycle {
+		padding: 30px 0;
+	}
+
+		.mobile-cycle .services-title {
+			margin: 0 auto;
+		}
+
 	.timeline-bubble {
 		width: 75%;
 	}
+
+	.consultants.about-us {
+		padding: 80px 0 20px;
+	}
+
+		.consultants.about-us h2:before {
+			top: -60px;
+		}
+
+	.our-team.about-us h2 {
+		margin-bottom: 40px;
+	}
+
+	.why-us-content ul {
+		padding-left: 15px;
+	}
+
+	.why-us-content h3 {
+		font-size: 20px;
+	}
+
+	.innovate {
+		padding: 20px;
+	}
+
+		.innovate p {
+			font-size: 22px;
+			line-height: 30px;
+		}
+
+		.innovate a {
+			padding: 10px 15px;
+		}
 
 	.footer-top {
 		padding: 30px 0 0;
