@@ -14,7 +14,7 @@
 		loop: true,
 		navText: false,
 		autoplay: true,
-		autoplayTimeout: 8000
+		autoplayTimeout: 11000
 	});
 
 	$('.mobile-articles').owlCarousel({
