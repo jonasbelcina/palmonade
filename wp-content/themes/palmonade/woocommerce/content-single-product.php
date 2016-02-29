@@ -102,7 +102,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="container">
 			<h2>Talk To Our Consultants</h2>
 			<p>Our experts have vast industry experience to understand and suggest the best solutions for you</p>
-			<a href="">Contact Us</a>
+			<a href="" data-toggle="modal" data-target="#contact_popup">Contact Us</a>
 		</div>
 	</section>
 
@@ -147,6 +147,22 @@ if ( ! defined( 'ABSPATH' ) ) {
       		<div class="modal-body">
       			<h3><?php the_title(); ?></h3>
     			<?php echo do_shortcode('[contact-form-7 id="114" title="Kitchen Enquiry"]'); ?>
+     	 	</div>
+    	</div>
+  	</div>
+</div>
+
+<!-- Contact Modal -->
+<div class="modal fade" id="contact_popup" tabindex="-1" role="dialog" aria-labelledby="ContactPopup">
+  	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+      		<div class="modal-header">
+   		 		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        		<h4 class="modal-title">Contact Us</h4>
+      		</div>
+
+      		<div class="modal-body">
+    			<?php echo do_shortcode('[contact-form-7 id="113" title="Contact Us Popup"]'); ?>
      	 	</div>
     	</div>
   	</div>

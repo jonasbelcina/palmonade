@@ -120,7 +120,7 @@ get_header(); ?>
 	<div class="container">
 		<h2>Talk To Our Consultants</h2>
 		<p>Our experts have vast industry experience to understand and suggest the best solutions for you</p>
-		<a href="">Contact Us</a>
+		<a href="" data-toggle="modal" data-target="#contact_popup">Contact Us</a>
 	</div>
 </section>
 
