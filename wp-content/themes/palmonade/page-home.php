@@ -18,16 +18,18 @@ get_header(); ?>
 				$mob_img = get_sub_field('mobile_image'); ?>
 
 				<div class="banner-item">
-					<img class="desktop-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-					<img class="mobile-img" src="<?php echo $mob_img['url']; ?>" alt="<?php echo $mob_img['alt']; ?>">
-					<div class="banner-caption">
-						<div class="container">
-							<div class="row">
-								<h2><?php echo the_sub_field('text_line_1'); ?></h2>
-								<h3><?php echo the_sub_field('text_line_2'); ?> <a href="<?php the_sub_field('call_to_action_link'); ?>"><?php the_sub_field('call_to_action_text'); ?> &rsaquo;</a></h3>
+					<a href="<?php the_sub_field('call_to_action_link'); ?>">
+						<img class="desktop-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+						<img class="mobile-img" src="<?php echo $mob_img['url']; ?>" alt="<?php echo $mob_img['alt']; ?>">
+						<div class="banner-caption">
+							<div class="container">
+								<div class="row">
+									<h2><?php echo the_sub_field('text_line_1'); ?></h2>
+									<h3><?php echo the_sub_field('text_line_2'); ?> <!--<a href="<?php the_sub_field('call_to_action_link'); ?>"><?php the_sub_field('call_to_action_text'); ?> &rsaquo;</a>--></h3>
+								</div>
 							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 
 			<?php endwhile;

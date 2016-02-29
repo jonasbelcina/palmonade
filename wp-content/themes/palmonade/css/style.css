@@ -3536,6 +3536,10 @@ button.alm-load-more-btn:focus {
 			margin: 0 auto;
 		}
 
+		.mobile-cycle .service-cycle h3 {
+			margin-top: 0;
+		}
+
 	.timeline-bubble {
 		width: 75%;
 	}
