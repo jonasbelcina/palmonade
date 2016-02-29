@@ -24,7 +24,7 @@ get_header(); ?>
 						<div class="container">
 							<div class="row">
 								<h2><?php echo the_sub_field('text_line_1'); ?></h2>
-								<h3><?php echo the_sub_field('text_line_2'); ?></h3>
+								<h3><?php echo the_sub_field('text_line_2'); ?> <a href="<?php the_sub_field('call_to_action_link'); ?>"><?php the_sub_field('call_to_action_text'); ?> &rsaquo;</a></h3>
 							</div>
 						</div>
 					</div>
@@ -45,6 +45,7 @@ get_header(); ?>
 							the_content();
 						endwhile;
 					endif; ?>
+					<a class="home-read-more" href="<?php the_field('main_content_call_to_action_link'); ?>"><?php the_field('main_content_call_to_action_text'); ?> &rsaquo;</a>
 				</div>
 			</div>
 

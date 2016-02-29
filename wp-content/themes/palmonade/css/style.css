@@ -225,6 +225,12 @@ header {
 			margin: 0;
 		}
 
+		.banner-caption h3 a {
+			color: #c0a06e;
+			font-size: 18px;
+			/*font-style: italic;*/
+		}
+
 	.home-banner .owl-controls {
 		position: absolute;
 		right: 60px;
@@ -308,6 +314,19 @@ header {
 		text-indent: 10px;
 		margin-bottom: 5px;
 	}
+
+	.home-read-more {
+		color: #c0a06e;
+		margin-top: 10px;
+		font-family: 'GraphieRegular';
+		display: inline-block;
+	}
+
+		.home-read-more:hover,
+		.home-read-more:focus {
+			color: #c0a06e;
+			text-decoration: none;
+		}
 
 	.home-contact {
 		position: relative;
