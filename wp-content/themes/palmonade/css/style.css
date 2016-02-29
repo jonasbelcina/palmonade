@@ -1272,8 +1272,12 @@ header {
 
 	.innovate {
 		text-align: center;
-		padding: 74px 40px 30px;
 		border: 5px solid #c0a06e;
+	}
+
+	.innovate .overlay {
+		background: rgba(142,117,79,0.5);
+		padding: 74px 40px 30px;
 	}
 
 	.innovate p {
@@ -3552,7 +3556,7 @@ button.alm-load-more-btn:focus {
 		font-size: 20px;
 	}
 
-	.innovate {
+	.innovate .overlay {
 		padding: 20px;
 	}
 

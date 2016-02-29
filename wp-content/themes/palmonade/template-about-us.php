@@ -209,8 +209,10 @@ get_header(); ?>
 				<h2><?php the_field('design_heading'); ?></h2>
 				<?php $innovate_img = get_field('design_image'); ?>
 				<div class="innovate" <?php if($innovate_img) { ?>style="background: url(<?php echo $innovate_img['url']; ?>) center top no-repeat; background-size: cover;"<?php } ?>>
-					<p><?php the_field('design_content'); ?></p>
-					<a href="<?php the_field('design_link'); ?>"><?php the_field('link_text'); ?></a>
+					<div class="overlay">
+						<p><?php the_field('design_content'); ?></p>
+						<a href="<?php the_field('design_link'); ?>"><?php the_field('link_text'); ?></a>
+					</div>
 				</div>
 			</div>
 
