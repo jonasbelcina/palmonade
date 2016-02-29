@@ -2963,7 +2963,8 @@ button.alm-load-more-btn:focus {
 		margin-bottom: 5px;
 	}
 
-	.banner-caption h3 {
+	.banner-caption h3,
+	.banner-caption h3 a {
 		font-size: 17px;
 	}
 
@@ -3284,7 +3285,8 @@ button.alm-load-more-btn:focus {
 		font-size: 20px;
 	}
 
-	.banner-caption h3 {
+	.banner-caption h3,
+	.banner-caption h3 a {
 		font-size: 15px;
 	}
 
