@@ -17,6 +17,7 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link rel="shortcut icon" href="<?php the_field('favicon' , 'options'); ?>" />
 	<?php endif; ?>
 	<?php wp_head(); ?>
 </head>
@@ -35,7 +36,7 @@
 		                <div class="header-contact">
 	                		<ul>
 	                			<li><a href="mailto:<?php the_field('email' , 'options'); ?>"><?php the_field('email' , 'options'); ?></a></li>
-	                			<li><?php the_field('phone' , 'options'); ?></li>
+	                			<li><?php the_field('mobile' , 'options'); ?></li>
 	                		</ul>
 		                </div>
 
