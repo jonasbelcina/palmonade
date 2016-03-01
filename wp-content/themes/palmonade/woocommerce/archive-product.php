@@ -22,7 +22,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header( 'shop' ); 
 
 global $wp_query;
-$top_parent = '';
 $cat = $wp_query->get_queried_object();
 // var_dump($cat);
 ?>

@@ -56,7 +56,16 @@ if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 	 *
 	 * @hooked woocommerce_template_loop_product_link_open - 10
 	 */
-	do_action( 'woocommerce_before_shop_loop_item' );
+
+	global $post;
+	$prod_terms = get_the_terms( $post->ID, 'product_cat' );
+	// foreach ($prod_terms as $prod_term) {
+	// 	print_r(array($prod_term));
+	// }
+
+	if($prod_terms[0]->term_id == 6 || $prod_terms[0]->parent == 6) :
+		do_action( 'woocommerce_before_shop_loop_item' );
+	endif;
 
 	/**
 	 * woocommerce_before_shop_loop_item_title hook.

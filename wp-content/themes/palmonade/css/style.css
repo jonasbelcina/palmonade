@@ -2192,13 +2192,13 @@ footer {
 	.expand span {
 		font-size: 10px;
 		position: absolute;
-		top: 6px;
-		margin-left: 10px;
+		top: 7px;
+		margin-left: 5px;
 	}
 
 		span.expand {
-			font-size: 12px;
-			padding: 0 5px;
+			font-size: 11px;
+			padding: 0 10px;
 		}
 
 	.woo-sidebar ul {
@@ -2227,6 +2227,7 @@ footer {
 
 	.woo-sidebar ul > ul {
 		overflow: hidden;
+		max-height: 1px;
 	}
 
 	.woo-sidebar ul > ul > ul {
@@ -2237,9 +2238,13 @@ footer {
 	}
 
 	.cat-active ul {
-		max-height: 500px;
+		max-height: auto;
 		-webkit-transition: none;
 		    	transition: none;
+	}
+
+	.woo-sidebar ul > ul.active-parent {
+		max-height: initial;
 	}
 
 .products {

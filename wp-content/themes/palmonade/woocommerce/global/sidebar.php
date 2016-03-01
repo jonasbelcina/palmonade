@@ -40,14 +40,18 @@ $cat = $wp_query->get_queried_object();
 			foreach ($top_parent as $parent) { ?>
 				<?php
 					if($parent->count > 0) {
-						$this_parent_class = '<span class="glyphicon glyphicon-minus expand" title="Toggle"></span>';
+						if($cat->term_id == $parent->term_id) :
+							$this_parent_class = '<span class="glyphicon glyphicon-minus expand" title="Toggle"></span>';
+						else :
+							$this_parent_class = '<span class="glyphicon glyphicon-plus expand" title="Toggle"></span>';
+						endif;
 					}
 					else {
 						$this_parent_class = '';
 					}
 
 				?>
-				<li class="top-parent cat-active <?php //if($parent->count > 0) { echo 'expand'; } ?> <?php if($cat->term_id == $parent->term_id) { echo 'current-cat'; } ?>"><a href="<?php echo get_term_link($parent); ?>"><?php echo $parent->name; ?></a><?php echo $this_parent_class; ?></li>
+				<li class="top-parent <?php //if($parent->count > 0) { echo 'expand'; } ?> <?php if($cat->term_id == $parent->term_id) { echo 'current-cat cat-active'; } ?>"><a href="<?php echo get_term_link($parent); ?>"><?php echo $parent->name; ?></a><?php echo $this_parent_class; ?></li>
 					<?php 
 					if($parent->count > 0) :
 						$child_args = array(
@@ -58,19 +62,28 @@ $cat = $wp_query->get_queried_object();
 						$child_category = get_terms('product_cat', $child_args);
 
 						if($child_category) :
-							echo '<ul>';
+							if($cat->term_id == $parent->term_id) :
+								echo '<ul class="active-parent">';
+							else :
+								echo '<ul>';
+							endif;
+
 								foreach ($child_category as $child_cat) {
 									if($child_cat->count > 0) {
-										$this_class = 'expand';
-										$this_span = '<span class="glyphicon glyphicon-plus"></span>';
+										$this_class = 'expand cat-active';
+										$this_span = '<span class="glyphicon glyphicon-minus"></span>';
 									}
 									else {
 										$this_class = '';
 										$this_span = '';
 									}
 
-									echo '<li class="' . $this_class . '">' . $child_cat->name . $this_span . '</li>';
-									if($child_cat->count > 0) :
+									if($child_cat->parent == 6) :
+										echo '<li class="' . $this_class . '">' . $child_cat->name . $this_span . '</li>';
+									else :
+										echo '<li>' . $child_cat->name . '</li>';
+									endif;
+									if($child_cat->count > 0 && $child_cat->parent == 6) :
 										$products_args = array(
 															'post_type' 	=> 'product',
 															'product_cat'	=> $child_cat->slug,
@@ -80,7 +93,7 @@ $cat = $wp_query->get_queried_object();
 										$products = new WP_Query($products_args);
 
 										if($products->have_posts()) :
-											echo '<ul>';
+											echo '<ul class="active-parent">';
 												while ( $products->have_posts() ) : $products->the_post();
 													echo '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
 												endwhile;
