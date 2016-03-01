@@ -81,7 +81,7 @@ $cat = $wp_query->get_queried_object();
 									if($child_cat->parent == 6) :
 										echo '<li class="' . $this_class . '">' . $child_cat->name . $this_span . '</li>';
 									else :
-										echo '<li>' . $child_cat->name . '</li>';
+										echo '<li><a class="smooth" href="#' . $child_cat->slug . '">' . $child_cat->name . '</a></li>';
 									endif;
 									if($child_cat->count > 0 && $child_cat->parent == 6) :
 										$products_args = array(

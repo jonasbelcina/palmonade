@@ -2106,6 +2106,10 @@ footer {
 	font-family: 'GraphieRegular';
 }
 
+.term-21 .woocommerce-breadcrumb {
+	position: relative;
+}
+
 .woocommerce .woocommerce-breadcrumb a {
 	color: #fff;
 }
@@ -2216,7 +2220,8 @@ footer {
 			    transition: all 0.3s linear;
 	}
 
-		.woo-sidebar ul li a:hover {
+		.woo-sidebar ul li a:hover,
+		.woo-sidebar ul li a:focus {
 			text-decoration: none;
 			color: #c0a06e;
 		}

@@ -40,10 +40,12 @@ $cat = $wp_query->get_queried_object();
 			$banner_img = get_field('banner_image', 'product_cat_' . $cat->term_id);
 			$mobile_img = get_field('mobile_banner_image', 'product_cat_' . $cat->term_id); ?>
 
-			<section class="product-cat-banner">
-				<img class="img-responsive" src="<?php echo $banner_img['url']; ?>" alt="<?php echo $banner_img['alt'] ?>" />
-				<img class="img-responsive" src="<?php echo $mobile_img['url']; ?>" alt="<?php echo $mobile_img['alt'] ?>" />
-			</section>
+			<?php if($banner_img && $mobile_img) : ?>
+				<section class="product-cat-banner">
+					<img class="img-responsive" src="<?php echo $banner_img['url']; ?>" alt="<?php echo $banner_img['alt'] ?>" />
+					<img class="img-responsive" src="<?php echo $mobile_img['url']; ?>" alt="<?php echo $mobile_img['alt'] ?>" />
+				</section>
+			<?php endif; ?>
 	<?php endif; ?>
 
 	<div class="product-listing">
@@ -76,7 +78,7 @@ $cat = $wp_query->get_queried_object();
 								foreach($cat as $c) :
 									// var_dump($c);
 
-									echo '<div class="prod-cat-group">';
+									echo '<div class="prod-cat-group" id="' . $c->slug . '">';
 										if($c->parent == 6) :
 											echo '<h2>' . $c->name  . ' Kitchens</h2>';
 										else :
