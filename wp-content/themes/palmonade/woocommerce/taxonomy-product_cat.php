@@ -86,7 +86,12 @@ $cat = $wp_query->get_queried_object();
 							if($cat) :
 								foreach($cat as $c) :
 									echo '<div class="prod-cat-group">';
-										echo '<h2>' . $c->name  . ' Kitchens</h2>';
+										if($c->parent == 6) :
+											echo '<h2>' . $c->name  . ' Kitchens</h2>';
+										else :
+											echo '<h2>' . $c->name  . '</h2>';
+										endif;
+
 										if($c->count > 0) :
 											// $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 											// $args = array(

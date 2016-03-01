@@ -2180,7 +2180,7 @@ footer {
 		margin-top: 15px;
 	}
 
-	.top-parent.current-cat {
+	.top-parent.current-cat a {
 		color: #c0a06e;
 	}
 
@@ -2195,6 +2195,11 @@ footer {
 		top: 6px;
 		margin-left: 10px;
 	}
+
+		span.expand {
+			font-size: 12px;
+			padding: 0 5px;
+		}
 
 	.woo-sidebar ul {
 		list-style-type: none;
@@ -2606,9 +2611,10 @@ button.alm-load-more-btn:focus {
 	}
 
 .consultants {
-	background: #f2f2f2;
+	background: url("../assets/images/consultants-about.jpg") center no-repeat;
 	padding: 45px 0;
 	text-align: center;
+	border-top: 1px solid #ebebeb;
 }
 
 	.consultants h2 {

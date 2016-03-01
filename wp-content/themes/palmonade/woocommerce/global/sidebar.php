@@ -40,14 +40,14 @@ $cat = $wp_query->get_queried_object();
 			foreach ($top_parent as $parent) { ?>
 				<?php
 					if($parent->count > 0) {
-						$this_parent_class = '<span class="glyphicon glyphicon-minus"></span>';
+						$this_parent_class = '<span class="glyphicon glyphicon-minus expand" title="Toggle"></span>';
 					}
 					else {
 						$this_parent_class = '';
 					}
 
 				?>
-				<li class="top-parent cat-active <?php if($parent->count > 0) { echo 'expand'; } ?> <?php if($cat->term_id == $parent->term_id) { echo 'current-cat'; } ?>"><?php echo $parent->name; ?><?php echo $this_parent_class; ?></li>
+				<li class="top-parent cat-active <?php //if($parent->count > 0) { echo 'expand'; } ?> <?php if($cat->term_id == $parent->term_id) { echo 'current-cat'; } ?>"><a href="<?php echo get_term_link($parent); ?>"><?php echo $parent->name; ?></a><?php echo $this_parent_class; ?></li>
 					<?php 
 					if($parent->count > 0) :
 						$child_args = array(
