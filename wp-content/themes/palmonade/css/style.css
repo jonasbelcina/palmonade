@@ -280,7 +280,8 @@ header {
 		letter-spacing: 3px;
 		text-align: center;
 		position: relative;
-		margin-bottom: 70px;
+		margin-bottom: 60px;
+		margin-top: 0;
 	}
 
 		.home-about h2:after {
@@ -303,13 +304,13 @@ header {
 
 	.home-about ul {
 		list-style: none;
-		margin-top: 35px;
+		margin-top: 20px;
 		padding-left: 15px;
 	}
 
 	.home-about li {
 		color: #676666;
-		font-size: 20px;
+		font-size: 18px;
 		list-style-image: url("../assets/images/list.png");
 		text-indent: 10px;
 		margin-bottom: 5px;
