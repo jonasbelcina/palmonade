@@ -59,7 +59,7 @@
 	$('.related-slides').owlCarousel({
 		items: 3,
 		nav: true,
-		loop: true,
+		// loop: true,
 		margin: 20,
 		navText: false,
 		autoplay: true,
