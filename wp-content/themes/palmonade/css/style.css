@@ -437,6 +437,7 @@ header {
 			line-height: 30px;
 			color: #333;
 			text-align: left;
+			min-height: 60px;
 		}
 
 		.news-date {
@@ -554,7 +555,12 @@ header {
 			font-size: 18px;
 			color: #676666;
 			margin-top: 20px;
+			padding: 0 20px;
 		}
+
+			.testimonial-by span {
+				display: block;
+			}
 
 		.testimonial-items .owl-controls {
 			width: 100%;
@@ -2623,7 +2629,7 @@ button.alm-load-more-btn:focus {
 
 .consultants {
 	background: url("../assets/images/consultants-about.jpg") center no-repeat;
-	padding: 45px 0;
+	padding: 110px 0 45px;
 	text-align: center;
 	border-top: 1px solid #ebebeb;
 }
@@ -2632,6 +2638,15 @@ button.alm-load-more-btn:focus {
 		font-size: 36px;
 		color: #c0a06e;
 		margin: 0 0 30px;
+		position: relative;
+	}
+
+	.consultants h2:before {
+	    content: url("../assets/images/consultants-icon.png");
+	    position: absolute;
+	    top: -72px;
+	    left: 50%;
+	    margin-left: -28px;
 	}
 
 	.consultants p {
@@ -2866,6 +2881,10 @@ button.alm-load-more-btn:focus {
 		.testimonial-by {
 			margin-top: 10px;
 		}
+
+			.testimonial-by span {
+				display: inline;
+			}
 
 		.testimonial-items .owl-controls {
 			bottom: initial;
@@ -3714,12 +3733,16 @@ button.alm-load-more-btn:focus {
 		}
 
 	.consultants {
-		padding: 30px 20px;
+		padding: 70px 20px 30px;
 	}
 
 		.consultants h2 {
 			font-size: 28px;
 			margin-bottom: 20px;
+		}
+
+		.consultants h2:before {
+			top: -55px;
 		}
 
 		.consultants p {
