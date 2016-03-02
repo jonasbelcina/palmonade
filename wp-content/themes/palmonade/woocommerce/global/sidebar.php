@@ -81,7 +81,11 @@ $cat = $wp_query->get_queried_object();
 									if($child_cat->parent == 6) :
 										echo '<li class="' . $this_class . '">' . $child_cat->name . $this_span . '</li>';
 									else :
-										echo '<li><a class="smooth" href="#' . $child_cat->slug . '">' . $child_cat->name . '</a></li>';
+										if($cat->term_id == 6) :
+											echo '<li><a class="smooth" href="' . get_term_link(21) . '#' . $child_cat->slug . '">' . $child_cat->name . '</a></li>';
+										else :
+											echo '<li><a class="smooth" href="#' . $child_cat->slug . '">' . $child_cat->name . '</a></li>';
+										endif;
 									endif;
 									if($child_cat->count > 0 && $child_cat->parent == 6) :
 										$products_args = array(
