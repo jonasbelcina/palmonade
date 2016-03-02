@@ -160,7 +160,63 @@ $cat = $wp_query->get_queried_object();
 	 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
 	 */
 	do_action( 'woocommerce_after_main_content' );
+
+	global $wp_query;
+	$cat = $wp_query->get_queried_object();
+	// var_dump($cat);
+
 ?>
+
+<?php if($cat->term_id == 21) : ?>
+	<section class="consultants about-us">
+		<div class="container">
+			<h2>Talk To Our Consultants</h2>
+			<p>Our experts have vast industry experience to understand and suggest the best solutions for you</p>
+			<a href="" data-toggle="modal" data-target="#contact_popup">Contact Us</a>
+		</div>
+	</section>
+
+	<section class="contact-icons about-us">
+		<div class="container">
+			<div class="col-sm-4 contact-icon-col">
+				<div class="contact-icon-wrap">
+					<h2>Office</h2>
+					<h3>Bldg 7, Street N606, JAFZA Dubai</h3>
+				</div>
+			</div>
+
+			<div class="col-sm-4 contact-icon-col">
+				<div class="contact-icon-wrap">
+					<h2>Phone</h2>
+					<h3>+971 455 8844 99</h3>
+				</div>
+			</div>
+
+			<div class="col-sm-4 contact-icon-col">
+				<div class="contact-icon-wrap">
+					<h2>E-mail</h2>
+					<h3><a href="mailto:info@palmonade.com">info@palmonade.com</a></h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Modal -->
+	<div class="modal fade" id="contact_popup" tabindex="-1" role="dialog" aria-labelledby="ContactPopup">
+	  	<div class="modal-dialog" role="document">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	   		 		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        		<h4 class="modal-title">Contact Us</h4>
+	      		</div>
+
+	      		<div class="modal-body">
+	    			<?php echo do_shortcode('[contact-form-7 id="113" title="Contact Us Popup"]'); ?>
+	     	 	</div>
+	    	</div>
+	  	</div>
+	</div>
+<?php endif; ?>
 
 <?php get_footer( 'shop' ); ?>
 

@@ -85,7 +85,9 @@ if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 	 */
 	do_action( 'woocommerce_shop_loop_item_title' );
 
-	echo '<p>' . shortenText(strip_tags(get_the_excerpt()), 70) . '</p>';
+	if($prod_terms[0]->term_id == 6 || $prod_terms[0]->parent == 6) :
+		echo '<p>' . shortenText(strip_tags(get_the_excerpt()), 70) . '</p>';
+	endif;
 
 	/**
 	 * woocommerce_after_shop_loop_item_title hook.
