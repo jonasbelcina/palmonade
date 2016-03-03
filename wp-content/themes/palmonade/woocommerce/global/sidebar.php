@@ -54,10 +54,19 @@ $cat = $wp_query->get_queried_object();
 				<li class="top-parent <?php //if($parent->count > 0) { echo 'expand'; } ?> <?php if($cat->term_id == $parent->term_id) { echo 'current-cat cat-active'; } ?>"><a href="<?php echo get_term_link($parent); ?>"><?php echo $parent->name; ?></a><?php echo $this_parent_class; ?></li>
 					<?php 
 					if($parent->count > 0) :
-						$child_args = array(
-										'hide_empty'	=> 0,
-										'parent' 		=> $parent->term_id,
-									);
+						if($parent->term_id == 6) :
+							$child_args = array(
+											'hide_empty'	=> 0,
+											'parent' 		=> $parent->term_id,
+										);
+						else :
+							$child_args = array(
+											'orderby'		=> 'slug',
+											// 'order'			=> 'DESC',
+											'hide_empty'	=> 0,
+											'parent' 		=> $parent->term_id,
+										);
+						endif;
 
 						$child_category = get_terms('product_cat', $child_args);
 
