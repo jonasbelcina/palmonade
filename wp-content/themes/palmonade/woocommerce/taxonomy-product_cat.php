@@ -66,11 +66,21 @@ $cat = $wp_query->get_queried_object();
 					<?php woocommerce_product_subcategories(); ?>
 
 						<?php
-							$cat_args = array(
-											'taxonomy'	=> 'product_cat',
-											'parent' 	=> $cat->term_id,
-											// 'hide_empty' => 0
-										);
+							if($cat->term_id == 6) :
+								$cat_args = array(
+												'taxonomy'	=> 'product_cat',
+												'parent' 	=> $cat->term_id,
+												// 'hide_empty' => 0
+											);
+							else:
+								$cat_args = array(
+												'orderby'	=> 'slug',
+												'taxonomy'	=> 'product_cat',
+												'parent' 	=> $cat->term_id,
+												// 'hide_empty' => 0
+											);
+
+							endif;
 
 							$cat = get_categories($cat_args);
 
