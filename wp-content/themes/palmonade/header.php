@@ -22,7 +22,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> <?php if(is_product_category('appliances')) { ?>ontouchstart<?php } ?>>
 
 	<header>
 		<div class="container">
