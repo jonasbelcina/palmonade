@@ -80,7 +80,7 @@ if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 		echo '
 				<div class="prod-holder">
 					<div class="prod-overlay">
-						<a class="kitchen-enquiry" href="" data-toggle="modal" data-target="#appliance_enquiry" data-product="' . $prod_terms[0]->name .' ' . get_the_title() . '" data-link="' . get_the_permalink(). '">Enquire Now</a>
+						<a class="kitchen-enquiry appliance-enquiry" href="" data-toggle="modal" data-target="#appliance_enquiry" data-product="' . $prod_terms[0]->name .' ' . get_the_title() . '" data-link="' . get_the_permalink(). '">Enquire Now</a>
 					</div>
 			';
 	endif;		
