@@ -3338,6 +3338,10 @@ button.alm-load-more-btn:focus {
 		min-height: 100px;
 	}
 
+	.product h3 {
+		font-size: 20px;
+	}
+
 }
 
 @media only screen and (max-width : 768px) {
@@ -3795,6 +3799,10 @@ button.alm-load-more-btn:focus {
 		width: 100%;
 		max-width: 330px;
 	}
+
+		.product h3 {
+			height: auto;
+		}
 
 		.prod-cat-group.alm-listing {
 			max-width: 330px;
