@@ -268,11 +268,6 @@
 	  });
 	});
 
-	$('.appliance-enquiry').on('click', function(e) {
-		e.preventDefault();
-		console.log('ZXC');
-	});
-
 	$('#appliance_enquiry form input[type="submit"]').on('click', function() {
 		var product = $('.appliance-enquiry').data('product');
 		$(".product-hidden").val(product);
