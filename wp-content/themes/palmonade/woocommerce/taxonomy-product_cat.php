@@ -77,6 +77,7 @@ $cat = $wp_query->get_queried_object();
 												'orderby'	=> 'slug',
 												'taxonomy'	=> 'product_cat',
 												'parent' 	=> $cat->term_id,
+												'exclude'  	=> 34
 												// 'hide_empty' => 0
 											);
 

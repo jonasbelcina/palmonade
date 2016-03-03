@@ -268,7 +268,8 @@
 	  });
 	});
 
-	$('.appliance-enquiry').on('click', function() {
+	$('.appliance-enquiry').on('click', function(e) {
+		e.preventDefault();
 		console.log('ZXC');
 	});
 

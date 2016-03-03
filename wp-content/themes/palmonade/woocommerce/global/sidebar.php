@@ -65,6 +65,7 @@ $cat = $wp_query->get_queried_object();
 											// 'order'			=> 'DESC',
 											'hide_empty'	=> 0,
 											'parent' 		=> $parent->term_id,
+											'exclude'		=> 34
 										);
 						endif;
 
