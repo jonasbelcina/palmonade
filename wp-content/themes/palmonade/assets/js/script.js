@@ -268,4 +268,76 @@
 	  });
 	});
 
+	$('#appliance_enquiry form input[type="submit"]').on('click', function() {
+		var product = $('.kitchen-enquiry').data('product');
+		$(".product-hidden").val(product);
+	});
+
+	$(document).ready(function () {
+		initializeMaps();
+	});
+
+	function initializeMaps() {
+
+		var allMarkers = [[25.002068, 55.086565, 'Palmon Group Headquarters', 'https://www.google.com/maps/place/Palmon+Group/@25.002068,55.086565,10z/data=!4m2!3m1!1s0x0:0x8dfba9f28eae0a2e?hl=en-US'],[25.1598597, 55.2158515, 'Ernestomeda Showroom', 'https://goo.gl/maps/g22BVNL2Ft32'],];
+        var myOptions = {
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            mapTypeControl: false,
+        };
+        map = new google.maps.Map(document.getElementById("map"),myOptions);
+        
+        var infowindow = new google.maps.InfoWindow(); 
+        var marker, i;
+        var bounds = new google.maps.LatLngBounds();
+
+        for (i = 0; i < allMarkers.length; i++) { 
+            var pos = new google.maps.LatLng(allMarkers[i][0], allMarkers[i][1]);
+            bounds.extend(pos);
+            marker = new google.maps.Marker({
+                position: pos,
+                map: map,
+            });
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                var map_address = allMarkers[i][2];
+                return function() {
+                    infowindow.setContent('<p>' + map_address + '</p><a href="' + allMarkers[i][3] + '" target="_blank">View on Google Map</a>' );
+                    infowindow.open(map, marker);
+                    // map.setZoom(16);
+                    var latLng = marker.getPosition();
+                    map.setCenter(latLng);
+                }
+            })(marker, i));
+        }
+        map.fitBounds(bounds);
+     
+    }
+
+    // browser window scroll (in pixels) after which the "back to top" link is shown
+    var offset = 300,
+    	//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+    	offset_opacity = 1200,
+    	//duration of the top scrolling animation (in ms)
+    	scroll_top_duration = 700,
+    	//grab the "back to top" link
+		$back_to_top = $('.cd-top');
+
+	//hide or show the "back to top" link
+	$(window).scroll(function(){
+		( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+		if( $(this).scrollTop() > offset_opacity ) { 
+			$back_to_top.addClass('cd-fade-out');
+		}
+	});
+
+	//smooth scroll to top
+	$back_to_top.on('click', function(event){
+		event.preventDefault();
+		$('body,html').animate({
+			scrollTop: 0 ,
+		 	}, scroll_top_duration
+		);
+	});
+
 })(jQuery);
+
+

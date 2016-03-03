@@ -1504,6 +1504,59 @@ footer {
 			color: #d8d8d8;
 		}
 
+	.cd-top {
+	    width: 60px;
+	    height: 60px;
+	    display: block;
+	    position: fixed;
+	    bottom: 30px;
+	    right: 30px;
+	    background: #c0a06e;
+	    border-radius: 4px;
+	    opacity: 0.5;
+	    border-radius: 50%;
+	    text-align: center;
+	    visibility: hidden;
+	}
+
+	.cd-top:hover {
+	    opacity: 1 !important;
+	}
+
+	.cd-top span {
+	    color: #fff;
+	    line-height: 56px;
+	    font-size: 24px;
+	}
+
+	.cd-top span:hover {
+	    color: #fff;
+	}
+
+	.cd-top.cd-is-visible,
+	.cd-top.cd-fade-out,
+	.no-touch .cd-top:hover {
+	    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+	    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+	    transition: opacity .3s 0s, visibility 0s 0s;
+	}
+
+	.cd-top.cd-is-visible {
+	    /* the button becomes visible */
+	    visibility: visible;
+	    opacity: 1;
+	}
+
+	.cd-top.cd-fade-out {
+	    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+	    opacity: .4;
+	}
+
+	.no-touch .cd-top:hover {
+	    background-color: #bf1f39;
+	    opacity: 1;
+	}
+
 /* 
 *  News page
 */
@@ -2099,6 +2152,11 @@ footer {
 	    height: 100%;
 	}
 
+	#map {
+		height: 400px;
+		width: 100%;
+	}
+
 /*
 *  Woocommerce styles
 */
@@ -2323,6 +2381,49 @@ footer {
 				line-height: 20px;
 				min-height: 60px;
 				margin: 0;
+			}
+
+			.prod-holder {
+				position: relative;
+			}
+
+			.prod-overlay {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: rgba(0,0,0,0.3);
+				opacity: 0;
+				-webkit-transition: all 0.3s linear;
+						transition: all 0.3s linear;
+			}
+
+			.prod-holder:hover .prod-overlay {
+				opacity: 1;
+			}
+
+			.prod-overlay .kitchen-enquiry {
+				width: 130px;
+				text-transform: none;
+				padding: 5px 0;
+				text-align: center;
+				position: absolute;
+				bottom: 25px;
+				left: 50%;
+				-webkit-transform: translateX(-50%);
+				   -moz-transform: translateX(-50%);
+				    -ms-transform: translateX(-50%);
+						transform: translateX(-50%);
+				-webkit-transition: all 0.3s linear;
+						transition: all 0.3s linear;
+			}
+
+			.prod-overlay a:hover,
+			.prod-overlay a:focus {
+				text-decoration: none;
+				background: #b89359;
+				outline: none;
 			}
 
 .woocommerce nav.woocommerce-pagination ul {
@@ -2797,8 +2898,11 @@ button.alm-load-more-btn:focus {
 	}
 
 #contact_popup .modal-dialog,
-#kitchen_enquiry .modal-dialog {
+#kitchen_enquiry .modal-dialog,
+#appliance_enquiry .modal-dialog {
 	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #kitchen_enquiry h3 {
@@ -3658,6 +3762,17 @@ button.alm-load-more-btn:focus {
 		.footer-top form {
 			margin: 0;
 		}
+
+	.cd-top {
+		width: 30px;
+		height: 30px;
+		right: 15px;
+	}
+	
+	.cd-top span {
+		line-height: 28px; 
+		font-size: 18px;
+	}
 
 	.product-cat-banner {
 		position: relative;

@@ -74,9 +74,25 @@ if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 	 * @hooked woocommerce_template_loop_product_thumbnail - 10
 	 */
 
-	if(is_single()) { echo '<div class="related-img">'; }
+	if(is_single()) : 
+		echo '<div class="related-img">';
+	elseif(!is_single() && ($prod_terms[0]->term_id == 21 || $prod_terms[0]->parent == 21)) :
+		echo '
+				<div class="prod-holder">
+					<div class="prod-overlay">
+						<a class="kitchen-enquiry" href="" data-toggle="modal" data-target="#appliance_enquiry" data-product="' . $prod_terms[0]->name .' ' . get_the_title() . '" data-link="' . get_the_permalink(). '">Enquire Now</a>
+					</div>
+			';
+	endif;		
+
 		do_action( 'woocommerce_before_shop_loop_item_title' );
-	if(is_single()) { echo '</div>'; }
+
+
+	if(is_single()) : 
+		echo '</div>';
+	elseif(!is_single() && ($prod_terms[0]->term_id == 21 || $prod_terms[0]->parent == 21)) :
+		echo '</div>';
+	endif;
 
 	/**
 	 * woocommerce_shop_loop_item_title hook.
@@ -103,7 +119,10 @@ if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 	 * @hooked woocommerce_template_loop_product_link_close - 5
 	 * @hooked woocommerce_template_loop_add_to_cart - 10
 	 */
-	do_action( 'woocommerce_after_shop_loop_item' );
+
+	if($prod_terms[0]->term_id == 6 || $prod_terms[0]->parent == 6) :
+		do_action( 'woocommerce_after_shop_loop_item' );
+	endif;
 	?>
 
 </div>

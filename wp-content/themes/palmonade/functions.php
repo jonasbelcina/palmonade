@@ -47,6 +47,7 @@ function palmonade_scripts() {
 	wp_register_script( 'palmonade-bootstrap', get_template_directory_uri().'/assets/js/bootstrap' . $suffix . '.js', array(), '3.3.6', true );
 	wp_register_script( 'vendor-isotope', get_template_directory_uri().'/assets/vendor/isotope.pkgd' . $suffix . '.js', array(), '1.0.0', true );
 	wp_register_script( 'palmonade-script', get_template_directory_uri().'/assets/js/script.js', array( 'jquery'), filemtime( $themejspath ), true );
+	wp_register_script( 'palmonade-map', 'https://maps.google.com/maps/api/js?sensor=false&ver=4.2.2', array( 'jquery'), '', true );
 
 	wp_enqueue_style('palmonade-bootstrap');
 	wp_enqueue_style('vendor-owl-carousel');
@@ -55,7 +56,9 @@ function palmonade_scripts() {
 	wp_enqueue_script('vendor-owl-carousel');
 	wp_enqueue_script('palmonade-bootstrap');
 	wp_enqueue_script('vendor-isotope');
+	wp_enqueue_script('palmonade-map');
 	wp_enqueue_script('palmonade-script');
+
 }
 
 add_action( 'wp_enqueue_scripts', 'palmonade_scripts' );

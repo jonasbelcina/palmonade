@@ -226,6 +226,23 @@ $cat = $wp_query->get_queried_object();
 	    	</div>
 	  	</div>
 	</div>
+
+	<!-- Appliance Enquiry Modal -->
+	<div class="modal fade" id="appliance_enquiry" tabindex="-1" role="dialog" aria-labelledby="Appliance Enquiry">
+	  	<div class="modal-dialog" role="document">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	   		 		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        		<h4 class="modal-title">Product Enquiry</h4>
+	      		</div>
+
+	      		<div class="modal-body">
+	      			<!-- <h3><?php the_title(); ?></h3> -->
+	    			<?php echo do_shortcode('[contact-form-7 id="571" title="Appliance Enquiry"]'); ?>
+	     	 	</div>
+	    	</div>
+	  	</div>
+	</div>
 <?php endif; ?>
 
 <?php get_footer( 'shop' ); ?>
