@@ -1897,6 +1897,10 @@ footer {
 	    line-height: 24px;
 	}
 
+	.news-content p img {
+		max-width: 100%;
+	}
+
 	.videobox {
 	    position: relative;
 	    padding-bottom: 56.25%;
