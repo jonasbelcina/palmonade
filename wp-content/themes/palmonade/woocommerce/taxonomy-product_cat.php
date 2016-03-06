@@ -199,7 +199,7 @@ $cat = $wp_query->get_queried_object();
 			<div class="col-sm-4 contact-icon-col">
 				<div class="contact-icon-wrap">
 					<h2>Phone</h2>
-					<h3>+971 455 8844 99</h3>
+					<h3>+9714 8817000</h3>
 				</div>
 			</div>
 
