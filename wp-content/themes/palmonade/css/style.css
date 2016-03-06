@@ -1899,7 +1899,7 @@ footer {
 
 	.news-content p img {
 		max-width: 100%;
-		width: auto;
+		width: auto !important;
 	}
 
 	.videobox {
