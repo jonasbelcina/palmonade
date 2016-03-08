@@ -268,9 +268,25 @@
 	  });
 	});
 
+	$('body').on('click', '.prod-overlay .kitchen-enquiry', function() {
+		$(this).next('.appliance-enquiry').addClass('appliance_pop');
+		// var product = $('.appliance-enquiry').data('product');
+		// $(".product-hidden").val(product);
+	});
+
+	// $( '.prod-overlay' ).mouseover(function() {
+	//   	console.log('asZZZ');
+	//     $(this).find('.kitchen-enquiry').addClass('appliance_pop');
+	// });
+
 	$('#appliance_enquiry form input[type="submit"]').on('click', function() {
-		var product = $('.appliance-enquiry').data('product');
+		var product = $('.appliance_pop').data('product');
+		console.log(product);
 		$(".product-hidden").val(product);
+	});
+
+	$('#appliance_enquiry').on('hidden.bs.modal', function (e) {
+		$('.appliance-enquiry').removeClass('appliance_pop');
 	});
 
 	$(document).ready(function () {
